@@ -3,12 +3,25 @@ import { Helmet } from 'react-helmet';
 import { useForm } from "react-hook-form"
 import { FaRegEye, FaRegEyeSlash } from 'react-icons/fa';
 import loginBg from '../../assets/images/login.webp'
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import useAuth from '../../hooks/useAuth';
+import toast, { Toaster } from 'react-hot-toast';
 const Login = () => {
+    const { signIn } = useAuth();
+    const navigate = useNavigate();
     const [showPassword, setShowPassword] = useState(false);
     const { register, handleSubmit, formState: { errors } } = useForm();
-    const onSubmit = data => {
-        console.log(data);
+
+      const onSubmit = data => {
+        signIn(data.email, data.password)
+            .then(result => {
+                console.log(result.user);
+                toast.success('Successfully created!');
+                navigate('/')
+            })
+            .catch(error => {
+                console.error(error);
+            })
     }
     // const handelReset = () => {
     //     const email = emailRef.current.value;
@@ -35,11 +48,11 @@ const Login = () => {
                         <h3 className='text-2xl font-bold text-center text-[#333]'>Login</h3>
                         <form className="w-full flex flex-col gap-2" onSubmit={handleSubmit(onSubmit)}>
 
-                            <label className='font-bold'>Email</label>
+                            <label className='font-bold text-[#333]'>Email</label>
                             <input className="bg-green-100 focus-visible:border-green-700 text-black rounded-md p-4 F3F3F3 placeholder:#9D9C9C" placeholder="Enter your email" {...register("email", { required: "Email Address is required" })} />
 
                             <div className=" flex justify-between">
-                                <label className='font-bold'>Password</label>
+                                <label className='font-bold text-[#333]'>Password</label>
 
                             </div>
 
@@ -51,12 +64,9 @@ const Login = () => {
                                     required: true,
                                     minLength: 6,
                                     maxLength: 20,
-                                    pattern: /(?=.*[A-Z])(?=.*[!@#$&*])(?=.*[0-9])(?=.*[a-z])/
+                                    pattern: /(?=.*[A-Z])(?=.*[0-9])(?=.*[a-z])/
                                 })} name="password" id="password" placeholder="Password" className="bg-green-100 text-black rounded-md p-4 F3F3F3 placeholder:#9D9C9C" />
                                 {errors.password?.type === 'required' && <p className="text-[#F7A582]">Password is required</p>}
-                                {errors.password?.type === 'minLength' && <p className="text-[#F7A582]">Password must be 6 characters</p>}
-                                {errors.password?.type === 'maxLength' && <p className="text-[#F7A582]">Password must be less than 20 characters</p>}
-                                {errors.password?.type === 'pattern' && <p className="text-[#F7A582]">Password must have one Uppercase one lower case, one number and one special character.</p>}
                                 <span className="absolute top-5 right-4" onClick={() => setShowPassword(!showPassword)}>
                                     {
                                         showPassword ? <FaRegEyeSlash></FaRegEyeSlash> : <FaRegEye></FaRegEye>
@@ -66,6 +76,7 @@ const Login = () => {
                             <input className="bg-[#0D1821] transition ease-in-out text-xl font-bold py-2 my-2 hover:bg-green-500 text-white rounded-lg col-span-2" type="submit" value="Login" />
                             <p className='text-center text-[#6C6B6B]'>Please register at first. Go to <Link to={'/register'} className="text-green-500 font-bold">Registation</Link></p>
                         </form>
+                        <Toaster />
                     </div>
                 </div>
             </div>
