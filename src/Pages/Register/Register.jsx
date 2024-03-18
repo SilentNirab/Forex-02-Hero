@@ -2,17 +2,24 @@ import { useState } from 'react';
 import { useForm } from "react-hook-form"
 import { FaRegEye, FaRegEyeSlash } from 'react-icons/fa';
 import loginBg from '../../assets/images/login.webp'
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
+import useAuth from '../../hooks/useAuth';
 const Register = () => {
-
+    const { createUser} = useAuth();
     const { register, handleSubmit, formState: { errors } } = useForm();
     const [showPassword, setShowPassword] = useState(false);
-
-
+    const navigete = useNavigate();
     const onSubmit = data => {
         console.log(data);
-
+        createUser(data.email, data.password)
+            .then(result => {
+                console.log(result.user);
+                navigete('/')
+            })
+            .catch(error => {
+                console.error(error);
+            })
     }
 
     return (
@@ -30,16 +37,16 @@ const Register = () => {
 
                             <form className="w-full flex flex-col gap-2" onSubmit={handleSubmit(onSubmit)}>
 
-                                <label className='font-bold'>Full Name</label>
+                                <label className='font-bold text-[#333]'>Full Name</label>
                                 <input className="bg-green-100 text-black rounded-md p-4 F3F3F3 placeholder:#9D9C9C" placeholder="Enter your name" type='text' {...register("name", { required: true })} aria-invalid={errors.firstName ? "true" : "false"} />
 
-                                <label className='font-bold'>Client ID</label>
+                                <label className='font-bold text-[#333]'>Client ID</label>
                                 <input className="bg-green-100 text-black rounded-md p-4 F3F3F3 placeholder:#9D9C9C" placeholder="Enter your username" type='text' {...register("username", { required: true })} aria-invalid={errors.firstName ? "true" : "false"} />
 
-                                <label className='font-bold'>Email</label>
+                                <label className='font-bold text-[#333]'>Email</label>
                                 <input className="bg-green-100 text-black rounded-md p-4 F3F3F3 placeholder:#9D9C9C" placeholder="Enter your email" type='email' {...register("email", { required: "Email Address is required" })} aria-invalid={errors.firstName ? "true" : "false"} />
 
-                                <label className='font-bold'>Password</label>
+                                <label className='font-bold text-[#333]'>Password</label>
                                 <div className=" form-control relative">
 
                                     <input type={
@@ -48,12 +55,12 @@ const Register = () => {
                                         required: true,
                                         minLength: 6,
                                         maxLength: 20,
-                                        pattern: /(?=.*[A-Z])(?=.*[!@#$&*])(?=.*[0-9])(?=.*[a-z])/
+                                        pattern: /(?=.*[A-Z])(?=.*[0-9])(?=.*[a-z])/
                                     })} name="password" id="password" placeholder="Password" className="bg-green-100 text-black rounded-md p-4 F3F3F3 placeholder:#9D9C9C" />
                                     {errors.password?.type === 'required' && <p className="text-[#F7A582]">Password is required</p>}
                                     {errors.password?.type === 'minLength' && <p className="text-[#F7A582]">Password must be 6 characters</p>}
                                     {errors.password?.type === 'maxLength' && <p className="text-[#F7A582]">Password must be less than 20 characters</p>}
-                                    {errors.password?.type === 'pattern' && <p className="text-[#F7A582]">Password must have one Uppercase one lower case, one number and one special character.</p>}
+                                    {errors.password?.type === 'pattern' && <p className="text-[#F7A582]">Password must have one Uppercase one lower case and one number.</p>}
                                     <span className="absolute top-5 right-4" onClick={() => setShowPassword(!showPassword)}>
                                         {
                                             showPassword ? <FaRegEyeSlash></FaRegEyeSlash> : <FaRegEye></FaRegEye>
