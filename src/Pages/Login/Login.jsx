@@ -5,7 +5,6 @@ import { FaRegEye, FaRegEyeSlash } from 'react-icons/fa';
 import loginBg from '../../assets/images/login.webp'
 import { Link, useNavigate } from 'react-router-dom';
 import useAuth from '../../hooks/useAuth';
-import toast, { Toaster } from 'react-hot-toast';
 const Login = () => {
     const { signIn } = useAuth();
     const navigate = useNavigate();
@@ -16,7 +15,6 @@ const Login = () => {
         signIn(data.email, data.password)
             .then(result => {
                 console.log(result.user);
-                toast.success('Successfully created!');
                 navigate('/')
             })
             .catch(error => {
@@ -76,7 +74,7 @@ const Login = () => {
                             <input className="bg-[#0D1821] transition ease-in-out text-xl font-bold py-2 my-2 hover:bg-green-500 text-white rounded-lg col-span-2" type="submit" value="Login" />
                             <p className='text-center text-[#6C6B6B]'>Please register at first. Go to <Link to={'/register'} className="text-green-500 font-bold">Registation</Link></p>
                         </form>
-                        <Toaster />
+                        
                     </div>
                 </div>
             </div>
