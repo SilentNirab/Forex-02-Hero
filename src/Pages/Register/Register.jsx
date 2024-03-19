@@ -5,17 +5,32 @@ import loginBg from '../../assets/images/login.webp'
 import { Link, useNavigate } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 import useAuth from '../../hooks/useAuth';
+import useAxios from '../../hooks/useAxios';
+import toast from 'react-hot-toast';
 const Register = () => {
     const { createUser} = useAuth();
     const { register, handleSubmit, formState: { errors } } = useForm();
     const [showPassword, setShowPassword] = useState(false);
     const navigete = useNavigate();
+    const publicAxios = useAxios();
     const onSubmit = data => {
+        const userInfo = {
+            name: data.name,
+            email: data.email,
+            clientId: data.clientId
+        }
         console.log(data);
         createUser(data.email, data.password)
             .then(result => {
                 console.log(result.user);
-                navigete('/')
+                publicAxios.post('/users', userInfo)
+                .then(res => {
+                    if (res.data.insertedID) {
+                        console.log('user added to the database')
+                        toast.success(" Login Success")
+                    }
+                })
+            navigete('/');  
             })
             .catch(error => {
                 console.error(error);
@@ -41,7 +56,7 @@ const Register = () => {
                                 <input className="bg-green-100 text-black rounded-md p-4 F3F3F3 placeholder:#9D9C9C" placeholder="Enter your name" type='text' {...register("name", { required: true })} aria-invalid={errors.firstName ? "true" : "false"} />
 
                                 <label className='font-bold text-[#333]'>Client ID</label>
-                                <input className="bg-green-100 text-black rounded-md p-4 F3F3F3 placeholder:#9D9C9C" placeholder="Enter your username" type='text' {...register("username", { required: true })} aria-invalid={errors.firstName ? "true" : "false"} />
+                                <input className="bg-green-100 text-black rounded-md p-4 F3F3F3 placeholder:#9D9C9C" placeholder="Enter your Client Id" type='text' {...register("clientId", { required: true })} aria-invalid={errors.firstName ? "true" : "false"} />
 
                                 <label className='font-bold text-[#333]'>Email</label>
                                 <input className="bg-green-100 text-black rounded-md p-4 F3F3F3 placeholder:#9D9C9C" placeholder="Enter your email" type='email' {...register("email", { required: "Email Address is required" })} aria-invalid={errors.firstName ? "true" : "false"} />
