@@ -1,10 +1,14 @@
+import Container from "../../Components/Container/Container";
+import Banner from "./Banner";
 
 const Home = () => {
     return (
-        <div className="">
-            <h1>Wellcome To Home
-            </h1>
-        </div>
+    <div>
+        <Container>
+            
+        </Container>
+        <Banner></Banner>
+    </div>
     );
 };
 
