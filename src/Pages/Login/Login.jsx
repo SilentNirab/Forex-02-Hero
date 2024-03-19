@@ -1,15 +1,17 @@
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 import { Helmet } from 'react-helmet';
 import { useForm } from "react-hook-form"
 import { FaRegEye, FaRegEyeSlash } from 'react-icons/fa';
 import loginBg from '../../assets/images/login.webp'
 import { Link, useNavigate } from 'react-router-dom';
 import useAuth from '../../hooks/useAuth';
+import toast from 'react-hot-toast';
 const Login = () => {
-    const { signIn } = useAuth();
+    const { signIn, resetpass } = useAuth();
     const navigate = useNavigate();
     const [showPassword, setShowPassword] = useState(false);
     const { register, handleSubmit, formState: { errors } } = useForm();
+    const emailRef = useRef(null)
 
       const onSubmit = data => {
         signIn(data.email, data.password)
@@ -21,17 +23,18 @@ const Login = () => {
                 console.error(error);
             })
     }
-    // const handelReset = () => {
-    //     const email = emailRef.current.value;
-
-    //     resetpass(email)
-    //     .then(() => {
-    //         console.log('email send');
-    //     })
-    //     .catch(error =>{
-    //         console.log(error);
-    //     })
-    // }
+    const handelReset = () => {
+        const email = emailRef.current.value;
+        ``
+        resetpass(email)
+        .then(() => {
+            console.log("email send");
+            toast("Email Send")
+        })
+        .catch(error =>{
+            console.log(error);
+        })
+    }
     return (
         <div className="bg-white">
             <Helmet>
@@ -47,7 +50,7 @@ const Login = () => {
                         <form className="w-full flex flex-col gap-2" onSubmit={handleSubmit(onSubmit)}>
 
                             <label className='font-bold text-[#333]'>Email</label>
-                            <input className="bg-green-100 focus-visible:border-green-700 text-black rounded-md p-4 F3F3F3 placeholder:#9D9C9C" placeholder="Enter your email" {...register("email", { required: "Email Address is required" })} />
+                            <input className="bg-green-100 focus-visible:border-green-700 text-black rounded-md p-4 F3F3F3 placeholder:#9D9C9C" ref={emailRef} placeholder="Enter your email" {...register("email", { required: "Email Address is required" })} />
 
                             <div className=" flex justify-between">
                                 <label className='font-bold text-[#333]'>Password</label>
@@ -70,6 +73,7 @@ const Login = () => {
                                         showPassword ? <FaRegEyeSlash></FaRegEyeSlash> : <FaRegEye></FaRegEye>
                                     }
                                 </span>
+                                <a onClick={handelReset} href="#">Forgot Password?</a>
                             </div>
                             <input className="bg-[#0D1821] transition ease-in-out text-xl font-bold py-2 my-2 hover:bg-green-500 text-white rounded-lg col-span-2" type="submit" value="Login" />
                             <p className='text-center text-[#6C6B6B]'>Please register at first. Go to <Link to={'/register'} className="text-green-500 font-bold">Registation</Link></p>
