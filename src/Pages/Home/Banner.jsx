@@ -1,26 +1,38 @@
+import { NavLink } from "react-router-dom";
 import Container from "../../Components/Container/Container";
 import banner from "../../assets/images/banner.png";
+import { MdOutlinePlayCircleOutline } from "react-icons/md";
+
 
 const Banner = () => {
   return (
     <div>
-      <div className="hero min-h-screen bg-base-200">
+      <div className="hero  bg-gradient-to-r from-gray-900 to-green-800">
         <Container>
-          <div className="flex-col lg:flex  lg:flex-row lg:justify-between">
-            <div className="flex-col mt-72 align-center lg:text-left">
-              <div>
-                <p className="">We are Trader</p>
-              <h1 className="text-7xl font-bold">
-                Lorem ipsum dolor sit amet.
-              </h1>
-              <p className="py-6">
-                Provident cupiditate voluptatem et in. Quaerat fugiat ut
-                assumenda excepturi exercitationem quasi. In deleniti eaque aut
-                repudiandae et a id nisi.
-              </p>
+          <div className="flex-col lg:flex lg:align-c lg:space-y-9 lg:flex-row lg:justify-between">
+            <div className="flex items-center lg:text-left">
+              <div className="space-y-8">
+                <p className="text-4xl text-green-400">We are Trader</p>
+                <h1 className="text-7xl text-white font-bold">
+                  Lorem ipsum dolor sit amet.
+                </h1>
+                <div className="md:flex md:items-center space-x-7">
+                  <NavLink to={"/register"}>
+                    <button className="transition ease-in-out px-5 py-4 bg-green-500 text-white rounded-md font-medium hover:bg-green-600 duration-500">
+                      Register Now
+                    </button>
+                  </NavLink>
+
+                  <NavLink to={"/register"}>
+                    <button className="flex justify-center items-center transition ease-in-out px-5 py-3 space-x-2 font- border-2 border-white text-white rounded-md font-medium hover:bg-green-600 duration-500">
+                    <span className="text-3xl"><MdOutlinePlayCircleOutline /></span>
+                      <span>Watch Video</span> 
+                    </button>
+                  </NavLink>
+                </div>
               </div>
             </div>
-            <div className="card shrink-0 w-full max-w-2xl shadow-2xl bg-base-100">
+            <div className="card w-full max-w-md  ">
               <img src={banner} alt="" />
             </div>
           </div>

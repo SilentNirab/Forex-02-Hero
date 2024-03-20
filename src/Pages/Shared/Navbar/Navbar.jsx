@@ -20,7 +20,7 @@ const Navbar = () => {
       </li>
       <li className="font-bold text-lg">
         <NavLink
-          to={"/about"}
+          to={"/blogs"}
           className={({ isActive, isPending }) =>
             isActive
               ? "border-green-500 border-b-2 px-1 py-2"
@@ -29,13 +29,27 @@ const Navbar = () => {
               : ""
           }
         >
-          About Us
+          BLOGS
+        </NavLink>
+      </li>
+      <li className="font-bold text-lg">
+        <NavLink
+          to={"/aboutUs"}
+          className={({ isActive, isPending }) =>
+            isActive
+              ? "border-green-500 border-b-2 px-1 py-2"
+              : isPending
+              ? "pending "
+              : ""
+          }
+        >
+          ABOUT US
         </NavLink>
       </li>
     </>
   );
   return (
-    <Container >
+    <Container>
       <div className="navbar bg-base-100 ">
         <div className="navbar-start">
           <div className="dropdown">
@@ -57,7 +71,7 @@ const Navbar = () => {
             </label>
             <ul
               tabIndex={0}
-              className=" menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+              className=" menu-sm dropdown-content  mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
             >
               {NavNavLinks}
             </ul>
@@ -69,12 +83,18 @@ const Navbar = () => {
         <div className="navbar-center hidden lg:flex">
           <ul className=" menu-horizontal px-1 space-x-4">{NavNavLinks}</ul>
         </div>
-        <div className="navbar-end">
+        <div className="navbar-end gap-x-2">
           <NavLink to={"/login"}>
-            <button className="px-4 py-2 bg-black text-white rounded-md font-medium">
+            <button className="transition ease-in-out  px-4 py-2 text-black rounded-md font-medium hover:bg-black hover:text-white duration-500">
               Login
             </button>
           </NavLink>
+          <NavLink to={"/register"}>
+            <button className="transition ease-in-out px-4 py-2 bg-green-500 text-white rounded-md font-medium hover:bg-green-600 duration-500">
+              Register Now
+            </button>
+          </NavLink>
+   
         </div>
       </div>
     </Container>

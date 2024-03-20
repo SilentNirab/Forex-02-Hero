@@ -5,6 +5,8 @@ import loginBg from "../../assets/images/login.webp";
 import { Link, useNavigate } from "react-router-dom";
 import { Helmet } from "react-helmet";
 import useAuth from "../../hooks/useAuth";
+import useAxios from "../../hooks/useAxios";
+import toast, { Toaster } from "react-hot-toast";
 const Register = () => {
   const { createUser } = useAuth();
   const {
@@ -14,11 +16,23 @@ const Register = () => {
   } = useForm();
   const [showPassword, setShowPassword] = useState(false);
   const navigete = useNavigate();
+  const publicAxios = useAxios();
   const onSubmit = (data) => {
+    const userInfo = {
+      name: data.name,
+      email: data.email,
+      clientId: data.clientId,
+    };
     console.log(data);
     createUser(data.email, data.password)
       .then((result) => {
         console.log(result.user);
+        publicAxios.post("/users", userInfo).then((res) => {
+          if (res.data.insertedID) {
+            console.log("user added to the database");
+            toast.success(" Login Success");
+          }
+        });
         navigete("/");
       })
       .catch((error) => {
@@ -40,6 +54,9 @@ const Register = () => {
             <h3 className="text-2xl text-[#333] font-bold capitalize text-center">
               REGISTRATION
             </h3>
+            <div>
+              <Toaster></Toaster>
+            </div>
 
             <form
               className="w-full flex flex-col gap-2"
@@ -57,9 +74,9 @@ const Register = () => {
               <label className="font-bold text-[#333]">Client ID</label>
               <input
                 className="bg-green-100 text-black rounded-md p-4 F3F3F3 placeholder:#9D9C9C"
-                placeholder="Enter your username"
+                placeholder="Enter your Client Id"
                 type="text"
-                {...register("username", { required: true })}
+                {...register("clientId", { required: true })}
                 aria-invalid={errors.firstName ? "true" : "false"}
               />
 
