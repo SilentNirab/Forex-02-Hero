@@ -1,6 +1,6 @@
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import Container from "../../Components/Container/Container";
-import banner from "../../assets/images/banner.png";
+import banner from "../../assets/images/banner-original.png";
 import { MdOutlinePlayCircleOutline } from "react-icons/md";
 
 
@@ -23,12 +23,12 @@ const Banner = () => {
                     </button>
                   </NavLink>
 
-                  <NavLink to={"/register"}>
+                  <Link to={"https://www.youtube.com/@manasdhali1"} target="_blank">
                     <button className="flex justify-center items-center transition ease-in-out px-5 py-3 space-x-2 font- border-2 border-white text-white rounded-md font-medium hover:bg-green-600 duration-500">
                     <span className="text-3xl"><MdOutlinePlayCircleOutline /></span>
                       <span>Watch Video</span> 
                     </button>
-                  </NavLink>
+                  </Link>
                 </div>
               </div>
             </div>
