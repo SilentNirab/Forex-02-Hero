@@ -9,7 +9,7 @@ const Banner = () => {
     <div>
       <div className="hero  bg-gradient-to-r from-gray-900 to-green-800">
         <Container>
-          <div className="flex-col lg:flex lg:align-c lg:space-y-9 lg:flex-row lg:justify-between">
+          <div className="flex-col lg:flex lg:items-center  lg:space-y-9 lg:flex-row-reverse lg:justify-between">
             <div className="flex items-center lg:text-left">
               <div className="space-y-8">
                 <p className="text-4xl text-green-400">We are Trader</p>
