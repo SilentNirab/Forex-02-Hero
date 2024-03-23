@@ -22,6 +22,7 @@ const Register = () => {
       name: data.name,
       email: data.email,
       clientId: data.clientId,
+      UserRole: "User"
     };
     console.log(data);
     createUser(data.email, data.password)

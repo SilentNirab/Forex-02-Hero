@@ -1,9 +1,9 @@
-
 import { FcMenu } from "react-icons/fc";
 import { NavLink, Outlet } from "react-router-dom";
+import useAdmin from "../../hooks/useAdmin";
 
 const Dashboard = () => {
-
+    const [isAdmin] = useAdmin();
     return (
         <div className="flex">
             {/* dashboard side bar */}
@@ -11,8 +11,8 @@ const Dashboard = () => {
                 <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
                 <div className="drawer-content">
                     <div className=" flex justify-between p-4">
-                        <label htmlFor="my-drawer-2" className="btn bg-green-500 hover:bg-green-600 drawer-button md:hidden"><FcMenu className="text-xl"></FcMenu></label>
-                        <img htmlFor="my-drawer-2" />
+                        <label htmlFor="my-drawer-2" className="btn bg-[#F36F21] hover:bg-[#ea7835] drawer-button md:hidden"><FcMenu className="text-xl"></FcMenu></label>
+                        <img htmlFor="my-drawer-2" className="md:hidden w-32 h-12" src="" />
                     </div>
                     {/* dashboard content */}
                     <div className="flex-1 p-8">
@@ -21,9 +21,27 @@ const Dashboard = () => {
                 </div>
                 <div className="drawer-side">
                     <label htmlFor="my-drawer-2" aria-label="close sidebar" className="drawer-overlay"></label>
-                    <ul className="menu p-4 w-80 min-h-full bg-green-600 text-base-content">
+                    <ul className="menu p-4 w-80 min-h-full bg-green-700 text-white">
                         {/* Sidebar content here */}
-                        
+                        {
+                            isAdmin ?
+                                <>
+                                    <li>
+                                        <NavLink to="/dashboard">
+                                            Profile</NavLink>
+                                    </li>
+                                    <li>
+                                        <NavLink to="/dashboard/addpost">
+                                            Add Post</NavLink>
+                                    </li>
+                                </>
+                                :
+                                <>
+                                   
+                                </>
+
+                        }
+
                         {/* shared nav links */}
                         <div className="divider"></div>
                         <li>

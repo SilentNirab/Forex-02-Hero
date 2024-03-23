@@ -76,7 +76,7 @@ const Login = () => {
                                         showPassword ? <FaRegEyeSlash></FaRegEyeSlash> : <FaRegEye></FaRegEye>
                                     }
                                 </span>
-                                <a onClick={handelReset} href="#">Forgot Password?</a>
+                                <Link onClick={handelReset}>Forgot Password?</Link>
                             </div>
                             <input className="bg-[#0D1821] transition ease-in-out text-xl font-bold py-2 my-2 hover:bg-green-500 text-white rounded-lg col-span-2" type="submit" value="Login" />
                             <p className='text-center text-[#6C6B6B]'>Please register at first. Go to <Link to={'/register'} className="text-green-500 font-bold">Registation</Link></p>
