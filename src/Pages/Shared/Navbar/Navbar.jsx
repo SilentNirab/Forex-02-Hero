@@ -1,8 +1,18 @@
 import { NavLink } from "react-router-dom";
 import Container from "../../../Components/Container/Container";
 import logo from "../../../assets/images/logo-transparent-CROP.png"
+import useAuth from "../../../hooks/useAuth";
 
 const Navbar = () => {
+  const { logOut, user } = useAuth();
+
+  const handelDelete = () => {
+    logOut()
+      .then(
+        console.log("logout done")
+
+      )
+  }
   const NavNavLinks = (
     <>
       <li className="font-bold text-lg">
@@ -12,8 +22,8 @@ const Navbar = () => {
             isActive
               ? "border-green-500 border-b-2  py-1"
               : isPending
-              ? "pending "
-              : ""
+                ? "pending "
+                : ""
           }
         >
           HOME
@@ -26,8 +36,8 @@ const Navbar = () => {
             isActive
               ? "border-green-500 border-b-2  py-1"
               : isPending
-              ? "pending "
-              : ""
+                ? "pending "
+                : ""
           }
         >
           BLOGS
@@ -40,13 +50,14 @@ const Navbar = () => {
             isActive
               ? "border-green-500 border-b-2  py-1"
               : isPending
-              ? "pending "
-              : ""
+                ? "pending "
+                : ""
           }
         >
           ABOUT US
         </NavLink>
       </li>
+
     </>
   );
   return (
@@ -79,18 +90,19 @@ const Navbar = () => {
               </ul>
             </div>
             <NavLink to={"/"}>
-            <img className="max-h-16" src={logo} alt="" />
+              <img className="max-h-16" src={logo} alt="" />
             </NavLink>
           </div>
           <div className="navbar-center hidden lg:flex">
             <ul className=" menu-horizontal px-1 space-x-4">{NavNavLinks}</ul>
           </div>
           <div className="navbar-end gap-x-2">
-            <NavLink to={"/login"}>
-              <button className="transition ease-in-out  px-4 py-2 text-black rounded-md font-medium hover:bg-black hover:text-white duration-500">
-                Login
-              </button>
-            </NavLink>
+            {
+              user ?
+                <button onClick={handelDelete} className="transition ease-in-out  px-4 py-2 text-black rounded-md font-medium hover:bg-black hover:text-white duration-500">Logout</button>
+                :
+                <NavLink to={"/login"}><button className="transition ease-in-out  px-4 py-2 text-black rounded-md font-medium hover:bg-black hover:text-white duration-500">Login</button></NavLink>
+            }
             <NavLink to={"/register"}>
               <button className="transition ease-in-out px-4 py-2 bg-green-500 text-white rounded-md font-medium hover:bg-green-600 duration-500">
                 Register Now
@@ -102,5 +114,6 @@ const Navbar = () => {
     </div>
   );
 };
+
 
 export default Navbar;
