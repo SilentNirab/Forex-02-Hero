@@ -11,7 +11,7 @@ const Team = () => {
           consequuntur quis magni.
         </p>
       </div>
-      <div className="bg-green-500 rounded-xl">
+      <div className="bg-gradient-to-r from-gray-900 to-green-800 rounded-2xl">
         <Teams></Teams>
       </div>
     </div>

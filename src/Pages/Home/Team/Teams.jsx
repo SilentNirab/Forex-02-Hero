@@ -32,8 +32,8 @@ const Teams = () => {
               </div>
             </div>{" "}
             <div className="px-6 py-4">
-              <div className="font-bold text-xl mb-2">Md Ajijul</div>
-              <p className="text-gray-700 text-base md:max-w-[500px] mx-auto">
+              <div className="font-bold text-white text-xl mb-2">Md Ajijul</div>
+              <p className="text-gray-200 text-base md:max-w-[500px] mx-auto">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas
                 harum quis possimus velit consectetur minima veritatis debitis
                 nemo provident voluptatem.
@@ -50,8 +50,8 @@ const Teams = () => {
               </div>
             </div>{" "}
             <div className="px-6 py-4">
-              <div className="font-bold text-xl mb-2">Md Ajijul</div>
-              <p className="text-gray-700 text-base md:max-w-[500px] mx-auto">
+              <div className="font-bold text-white text-xl mb-2">Md Ajijul</div>
+              <p className="text-gray-200 text-base md:max-w-[500px] mx-auto">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas
                 harum quis possimus velit consectetur minima veritatis debitis
                 nemo provident voluptatem.
@@ -68,8 +68,8 @@ const Teams = () => {
               </div>
             </div>{" "}
             <div className="px-6 py-4">
-              <div className="font-bold text-xl mb-2">Md Ajijul</div>
-              <p className="text-gray-700 text-base md:max-w-[500px] mx-auto">
+              <div className="font-bold text-white text-xl mb-2">Md Ajijul</div>
+              <p className="text-gray-200 text-base md:max-w-[500px] mx-auto">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas
                 harum quis possimus velit consectetur minima veritatis debitis
                 nemo provident voluptatem.
@@ -86,8 +86,8 @@ const Teams = () => {
               </div>
             </div>{" "}
             <div className="px-6 py-4">
-              <div className="font-bold text-xl mb-2">Md Ajijul</div>
-              <p className="text-gray-700 text-base md:max-w-[500px] mx-auto">
+              <div className="font-bold text-white text-xl mb-2">Md Ajijul</div>
+              <p className="text-gray-200 text-base md:max-w-[500px] mx-auto">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas
                 harum quis possimus velit consectetur minima veritatis debitis
                 nemo provident voluptatem.
@@ -104,8 +104,8 @@ const Teams = () => {
               </div>
             </div>{" "}
             <div className="px-6 py-4">
-              <div className="font-bold text-xl mb-2">Md Ajijul</div>
-              <p className="text-gray-700 text-base md:max-w-[500px] mx-auto">
+              <div className="font-bold text-white text-xl mb-2">Md Ajijul</div>
+              <p className="text-gray-200 text-base md:max-w-[500px] mx-auto">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas
                 harum quis possimus velit consectetur minima veritatis debitis
                 nemo provident voluptatem.
@@ -122,8 +122,8 @@ const Teams = () => {
               </div>
             </div>{" "}
             <div className="px-6 py-4">
-              <div className="font-bold text-xl mb-2">Md Ajijul</div>
-              <p className="text-gray-700 text-base md:max-w-[500px] mx-auto">
+              <div className="font-bold text-white text-xl mb-2">Md Ajijul</div>
+              <p className="text-gray-200 text-base md:max-w-[500px] mx-auto">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas
                 harum quis possimus velit consectetur minima veritatis debitis
                 nemo provident voluptatem.
@@ -140,8 +140,8 @@ const Teams = () => {
               </div>
             </div>{" "}
             <div className="px-6 py-4">
-              <div className="font-bold text-xl mb-2">Md Ajijul</div>
-              <p className="text-gray-700 text-base md:max-w-[500px] mx-auto">
+              <div className="font-bold text-white text-xl mb-2">Md Ajijul</div>
+              <p className="text-gray-200 text-base md:max-w-[500px] mx-auto">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas
                 harum quis possimus velit consectetur minima veritatis debitis
                 nemo provident voluptatem.
@@ -158,8 +158,8 @@ const Teams = () => {
               </div>
             </div>{" "}
             <div className="px-6 py-4">
-              <div className="font-bold text-xl mb-2">Md Ajijul</div>
-              <p className="text-gray-700 text-base md:max-w-[500px] mx-auto">
+              <div className="font-bold text-white text-xl mb-2">Md Ajijul</div>
+              <p className="text-gray-200 text-base md:max-w-[500px] mx-auto">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas
                 harum quis possimus velit consectetur minima veritatis debitis
                 nemo provident voluptatem.
@@ -176,8 +176,8 @@ const Teams = () => {
               </div>
             </div>{" "}
             <div className="px-6 py-4">
-              <div className="font-bold text-xl mb-2">Md Ajijul</div>
-              <p className="text-gray-700 text-base md:max-w-[500px] mx-auto">
+              <div className="font-bold text-white text-xl mb-2">Md Ajijul</div>
+              <p className="text-gray-200 text-base md:max-w-[500px] mx-auto">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas
                 harum quis possimus velit consectetur minima veritatis debitis
                 nemo provident voluptatem.
@@ -194,8 +194,8 @@ const Teams = () => {
               </div>
             </div>{" "}
             <div className="px-6 py-4">
-              <div className="font-bold text-xl mb-2">Md Ajijul</div>
-              <p className="text-gray-700 text-base md:max-w-[500px] mx-auto">
+              <div className="font-bold text-white text-xl mb-2">Md Ajijul</div>
+              <p className="text-gray-200 text-base md:max-w-[500px] mx-auto">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas
                 harum quis possimus velit consectetur minima veritatis debitis
                 nemo provident voluptatem.
@@ -212,8 +212,8 @@ const Teams = () => {
               </div>
             </div>{" "}
             <div className="px-6 py-4">
-              <div className="font-bold text-xl mb-2">Md Ajijul</div>
-              <p className="text-gray-700 text-base md:max-w-[500px] mx-auto">
+              <div className="font-bold text-white text-xl mb-2">Md Ajijul</div>
+              <p className="text-gray-200 text-base md:max-w-[500px] mx-auto">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas
                 harum quis possimus velit consectetur minima veritatis debitis
                 nemo provident voluptatem.
@@ -230,8 +230,8 @@ const Teams = () => {
               </div>
             </div>{" "}
             <div className="px-6 py-4">
-              <div className="font-bold text-xl mb-2">Md Ajijul</div>
-              <p className="text-gray-700 text-base md:max-w-[500px] mx-auto">
+              <div className="font-bold text-white text-xl mb-2">Md Ajijul</div>
+              <p className="text-gray-200 text-base md:max-w-[500px] mx-auto">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas
                 harum quis possimus velit consectetur minima veritatis debitis
                 nemo provident voluptatem.

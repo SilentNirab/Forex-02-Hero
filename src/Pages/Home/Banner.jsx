@@ -3,7 +3,6 @@ import Container from "../../Components/Container/Container";
 import banner from "../../assets/images/banner-original.png";
 import { MdOutlinePlayCircleOutline } from "react-icons/md";
 
-
 const Banner = () => {
   return (
     <div>
@@ -25,8 +24,10 @@ const Banner = () => {
 
                   <NavLink to={"/register"}>
                     <button className="flex justify-center items-center transition ease-in-out px-5 py-3 space-x-2 font- border-2 border-white text-white rounded-md font-medium hover:bg-green-600 duration-500">
-                    <span className="text-3xl"><MdOutlinePlayCircleOutline /></span>
-                      <span>Watch Video</span> 
+                      <span className="text-3xl">
+                        <MdOutlinePlayCircleOutline />
+                      </span>
+                      <span>Watch Video</span>
                     </button>
                   </NavLink>
                 </div>
