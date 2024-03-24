@@ -1,10 +1,7 @@
-
 import { useQuery } from "@tanstack/react-query";
 import { FaTrashAlt, FaUsers } from "react-icons/fa";
 import Swal from "sweetalert2";
 import useAxios from "../../../hooks/useAxios";
-
-
 
 const AllUsers = () => {
     const publicAxios = useAxios();
@@ -14,29 +11,35 @@ const AllUsers = () => {
             const res = await publicAxios.get('/users');
             return res.data;
         }
-    })
+    });
 
-    const handleMakeAdmin = user =>{
-        publicAxios.patch(`/users/admin/${user._id}`)
-        .then(res =>{
-            console.log(res.data)
-            if(res.data.modifiedCount > 0){
-                refetch();
-                Swal.fire({
-                    position: "top-end",
-                    icon: "success",
-                    title: `${user.name} is an Admin Now!`,
-                    showConfirmButton: false,
-                    timer: 1500
-                  });
+    const handleMakeRole = (user, role) => {
+        Swal.fire({
+            title: `Are you sure you want to make ${user.name} a ${role}?`,
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#3085d6",
+            cancelButtonColor: "#d33",
+            confirmButtonText: `Yes, Make ${role}`
+        }).then((result) => {
+            if (result.isConfirmed) {
+                publicAxios.patch(`/users/${role}/${user._id}`)
+                    .then(res => {
+                        if (res.data.modifiedCount > 0) {
+                            refetch();
+                            Swal.fire({
+                                icon: "success",
+                                title: `${user.name} is now a ${role}!`,
+                            });
+                        }
+                    })
             }
-        })
+        });
     }
 
-    const handleDeleteUser = user => {
+    const handleDeleteUser = (user) => {
         Swal.fire({
             title: "Are you sure?",
-            text: "You won't be able to revert this!",
             icon: "warning",
             showCancelButton: true,
             confirmButtonColor: "#3085d6",
@@ -44,7 +47,6 @@ const AllUsers = () => {
             confirmButtonText: "Yes, delete it!"
         }).then((result) => {
             if (result.isConfirmed) {
-
                 publicAxios.delete(`/users/${user._id}`)
                     .then(res => {
                         if (res.data.deletedCount > 0) {
@@ -63,34 +65,42 @@ const AllUsers = () => {
     return (
         <div>
             <div className="flex justify-evenly my-4">
-                <h2 className="text-3xl">All Users</h2>
-                <h2 className="text-3xl">Total Users: {users.length}</h2>
+                <h2 className="text-3xl bg-green-400 text-white  px-10 py-6 rounded-md">Total Users: {users.length}</h2>
             </div>
             <div className="overflow-x-auto">
                 <table className="table table-zebra w-full">
-                    {/* head */}
                     <thead>
                         <tr>
-                            <th></th>
+                            <th>Index</th>
                             <th>Name</th>
                             <th>Email</th>
+                            <th>Client Id</th>
                             <th>Role</th>
                             <th>Action</th>
                         </tr>
                     </thead>
                     <tbody>
-                        {
-                            users.map((user, index) => <tr key={user._id}>
+                        {users.map((user, index) => (
+                            <tr key={user._id}>
                                 <th>{index + 1}</th>
                                 <td>{user.name}</td>
                                 <td>{user.email}</td>
+                                <td>{user.clientId}</td>
                                 <td>
-                                    { user.role === 'admin' ? 'Admin' : <button
-                                        onClick={() => handleMakeAdmin(user)}
-                                        className="btn btn-lg bg-orange-500">
-                                        <FaUsers className="text-white 
-                                        text-2xl"></FaUsers>
-                                    </button>}
+                                    {user.role === 'admin' ? 'Admin' : user.role === 'client' ? 'Client' : (
+                                        <div className="flex justify-start">
+                                            <button
+                                                onClick={() => handleMakeRole(user, 'admin')}
+                                                className="btn text-white bg-green-500 hover:bg-green-600">
+                                                Admin
+                                            </button>
+                                            <button
+                                                onClick={() => handleMakeRole(user, 'client')}
+                                                className="btn  bg-green-500 hover:bg-green-600">
+                                                <FaUsers className="text-white text-xl"></FaUsers>
+                                            </button>
+                                        </div>
+                                    )}
                                 </td>
                                 <td>
                                     <button
@@ -99,9 +109,8 @@ const AllUsers = () => {
                                         <FaTrashAlt className="text-red-600"></FaTrashAlt>
                                     </button>
                                 </td>
-                            </tr>)
-                        }
-
+                            </tr>
+                        ))}
                     </tbody>
                 </table>
             </div>

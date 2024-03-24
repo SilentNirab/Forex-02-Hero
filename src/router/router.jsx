@@ -9,6 +9,7 @@ import Blogs from "../Pages/Blog/Blogs";
 import AboutUs from "../Pages/AboutUs/AboutUs";
 import AllUsers from "../Pages/Dashboard/AllUser/Alluser";
 import AddPost from "../Pages/Dashboard/AddPost/AddPost";
+import AdminProfile from "../Pages/Dashboard/AdminProfile/AdminProfile";
 
 export const router = createBrowserRouter([
   {
@@ -45,7 +46,11 @@ export const router = createBrowserRouter([
     errorElement: <Errorpage></Errorpage>,
     children: [
       {
-        path: '/dashboard',
+        path: "/dashboard/",
+        element: <AdminProfile></AdminProfile>
+      },
+      {
+        path: '/dashboard/allusers',
         element:<AllUsers></AllUsers>
       },
       {
