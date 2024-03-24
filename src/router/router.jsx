@@ -4,11 +4,11 @@ import Home from "../Pages/Home/Home";
 import Errorpage from "../Pages/Errorpage/Errorpage";
 import Login from "../Pages/Login/Login";
 import Register from "../Pages/Register/Register";
-import Dashboard from "../layouts/Dashboard/Dashboard";
+// import Dashboard from "../layouts/Dashboard/Dashboard";
 import Blogs from "../Pages/Blog/Blogs";
 import AboutUs from "../Pages/AboutUs/AboutUs";
-import AllUsers from "../Pages/Dashboard/AllUser/Alluser";
-import AddPost from "../Pages/Dashboard/AddPost/AddPost";
+// import AllUsers from "../Pages/Dashboard/AllUser/Alluser";
+// import AddPost from "../Pages/Dashboard/AddPost/AddPost";
 
 export const router = createBrowserRouter([
   {
@@ -39,19 +39,19 @@ export const router = createBrowserRouter([
       },
     ],
   },
-  {
-    path: "/dashboard",
-    element: <Dashboard></Dashboard>,
-    errorElement: <Errorpage></Errorpage>,
-    children: [
-      {
-        path: '/dashboard',
-        element:<AllUsers></AllUsers>
-      },
-      {
-        path: "/dashboard/addpost",
-        element: <AddPost></AddPost>
-      }
-  ],
-  },
+  // {
+  //   path: "/dashboard",
+  //   element: <Dashboard></Dashboard>,
+  //   errorElement: <Errorpage></Errorpage>,
+  //   children: [
+  //     // {
+  //     //   path: '/dashboard',
+  //     //   element:<AllUsers></AllUsers>
+  //     // },
+  //     {
+  //       path: "/dashboard/addpost",
+  //       element: <AddPost></AddPost>
+  //     }
+  // ],
+  // },
 ]);

@@ -7,12 +7,12 @@ import Team from "./Team/Team";
 
 const Home = () => {
   return (
-    <div>
+    <div className="min-h-[80vh]">
       <Banner></Banner>
       <Container>
         <Cards></Cards>
         <Team></Team>
-        
+
         <Broker></Broker>
       </Container>
     </div>
