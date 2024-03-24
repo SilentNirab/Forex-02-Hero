@@ -1,0 +1,54 @@
+import { Link, NavLink } from "react-router-dom";
+import Container from "../../Components/Container/Container";
+import banner from "../../assets/images/banner-original.png";
+import { MdOutlinePlayCircleOutline } from "react-icons/md";
+
+const Banner = () => {
+  return (
+    <div>
+      <div className=" md:pt-20  bg-gradient-to-r from-green-800 to-gray-900">
+        <Container>
+          <div className="flex-col justify-center w-full md:flex md:items-center md:space-y-9 md:flex-row md:justify-between">
+            <div className="   w-6/12  ">
+              <img src={banner} className="sm:max-w-sm md:max-w-md" alt="" />
+            </div>
+            <div className="text-center pt-4 md:pt-0 md:text-left w-6/12">
+              <div className="space-y-2 md:space-y-8">
+                <p className="text-xl md:text-2xl lg:text-4xl text-green-400">We are Trader</p>
+                <h1 className="text-3xl md:text-5xl lg:text-7xl text-white font-bold">
+                  Lorem ipsum dolor sit amet.
+                </h1>
+
+                {/* button secton */}
+                <div className="flex items-center justify-center md:justify-normal space-x-3 md:space-x-7">
+                  <NavLink to={"/register"}>
+                    <button className="transition ease-in-out my-5 px-2 py-1 md:px-5 md:py-4 bg-green-500 text-white rounded-md font-normal hover:bg-green-600 duration-500">
+                      Register Now
+                    </button>
+                  </NavLink>
+
+                  {/* watch video button */}
+                  <div className="">
+                  <Link
+                    to={"https://www.youtube.com/@manasdhali1"}
+                    target="_blank"
+                  >
+                    <button className="flex items-center  transition ease-in-out px-2 py-1 md:px-5 md:py-3 space-x-2  font- border-2 border-white text-white rounded-md font-medium hover:bg-green-600 duration-500">
+                      <span className=" text-md md:text-3xl">
+                        <MdOutlinePlayCircleOutline />
+                      </span>
+                      <span className="">Watch Video</span>
+                    </button>
+                  </Link>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </Container>
+      </div>
+    </div>
+  );
+};
+
+export default Banner;
