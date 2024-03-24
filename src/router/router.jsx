@@ -7,8 +7,14 @@ import Register from "../Pages/Register/Register";
 // import Dashboard from "../layouts/Dashboard/Dashboard";
 import Blogs from "../Pages/Blog/Blogs";
 import AboutUs from "../Pages/AboutUs/AboutUs";
+<<<<<<< HEAD
 // import AllUsers from "../Pages/Dashboard/AllUser/Alluser";
 // import AddPost from "../Pages/Dashboard/AddPost/AddPost";
+=======
+import AllUsers from "../Pages/Dashboard/AllUser/Alluser";
+import AddPost from "../Pages/Dashboard/AddPost/AddPost";
+import AdminProfile from "../Pages/Dashboard/AdminProfile/AdminProfile";
+>>>>>>> b42e0a5c643c750919a7107385ba7c62f7da5d9a
 
 export const router = createBrowserRouter([
   {
@@ -39,6 +45,7 @@ export const router = createBrowserRouter([
       },
     ],
   },
+<<<<<<< HEAD
   // {
   //   path: "/dashboard",
   //   element: <Dashboard></Dashboard>,
@@ -54,4 +61,25 @@ export const router = createBrowserRouter([
   //     }
   // ],
   // },
+=======
+  {
+    path: "/dashboard",
+    element: <Dashboard></Dashboard>,
+    errorElement: <Errorpage></Errorpage>,
+    children: [
+      {
+        path: "/dashboard/",
+        element: <AdminProfile></AdminProfile>
+      },
+      {
+        path: '/dashboard/allusers',
+        element:<AllUsers></AllUsers>
+      },
+      {
+        path: "/dashboard/addpost",
+        element: <AddPost></AddPost>
+      }
+  ],
+  },
+>>>>>>> b42e0a5c643c750919a7107385ba7c62f7da5d9a
 ]);
