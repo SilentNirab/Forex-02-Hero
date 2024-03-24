@@ -2,10 +2,11 @@ import { NavLink } from "react-router-dom";
 import Container from "../../../Components/Container/Container";
 import logo from "../../../assets/images/logo-transparent-CROP.png"
 import useAuth from "../../../hooks/useAuth";
+import useAdmin from "../../../hooks/useAdmin";
 
 const Navbar = () => {
   const { logOut, user } = useAuth();
-
+  const [isAdmin] = useAdmin();
   const handelDelete = () => {
     logOut()
       .then(
@@ -57,6 +58,25 @@ const Navbar = () => {
           ABOUT US
         </NavLink>
       </li>
+      {
+        isAdmin ? 
+        <li className="font-bold text-lg">
+        <NavLink
+          to={"/dashboard"}
+          className={({ isActive, isPending }) =>
+            isActive
+              ? "border-green-500 border-b-2  py-1"
+              : isPending
+                ? "pending "
+                : ""
+          }
+        >
+          DASHBOARD
+        </NavLink>
+      </li> 
+      : 
+      ""
+      }
 
     </>
   );

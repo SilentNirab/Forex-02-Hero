@@ -2,7 +2,7 @@
 const AdminProfile = () => {
     return (
         <div>
-            <h2>Admin</h2>
+            <h1>Wellcome to Dashboard</h1>
         </div>
     );
 };
