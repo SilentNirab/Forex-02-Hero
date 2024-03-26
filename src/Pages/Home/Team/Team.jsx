@@ -3,7 +3,7 @@ import Teams from "./Teams";
 
 const Team = () => {
   return (
-    <div className="pt-10 pb-20 bg-gray-200">
+    <div className="pt-10 pb-20 bg-gray-100">
       <Container>
         <div className="text-center pb-8">
           <h2 className="text-3xl md:text-5xl inline border-b-2 border-green-600  font-semibold">

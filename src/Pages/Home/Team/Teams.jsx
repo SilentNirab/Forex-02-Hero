@@ -9,6 +9,10 @@ import {
   FaTwitter,
 } from "react-icons/fa";
 
+// image import
+import ajijul from "../../../assets/images/ajijul.jpg";
+import ajijul2 from "../../../assets/images/ajijul 2.jpg";
+
 import "swiper/css/bundle";
 
 // import required modules
@@ -20,6 +24,7 @@ const Teams = () => {
       <Swiper
         slidesPerView={3}
         spaceBetween={10}
+        loop={true}
         autoplay={{
           delay: 2500,
           disableOnInteraction: false,
@@ -44,23 +49,23 @@ const Teams = () => {
         modules={[Autoplay]}
         className="mySwiper"
       >
-    
         <SwiperSlide>
           {" "}
           <div className="w-full bg-white rounded-lg p-12 flex flex-col justify-center items-center">
             <div className="mb-8">
               <img
                 className="object-center object-cover rounded-full h-36 w-36"
-                src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1170&q=80"
+                src={ajijul}
                 alt=""
               />
             </div>
             <div className="text-center">
               <p className="text-xl text-gray-700 font-bold mb-2">
-                Lucy Carter
+                Engineer Azizul Haque
               </p>
               <p className="text-base text-gray-400 font-normal">
-                Graphic Designer
+                I am working as Forex 02 hero virtual assistant so if anyone has
+                any problem please let me know or call me directly.
               </p>
             </div>
 
@@ -78,16 +83,17 @@ const Teams = () => {
             <div className="mb-8">
               <img
                 className="object-center object-cover rounded-full h-36 w-36"
-                src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1170&q=80"
+                src={ajijul2}
                 alt=""
               />
             </div>
             <div className="text-center">
               <p className="text-xl text-gray-700 font-bold mb-2">
-                Lucy Carter
+                Engineer Azizul Haque
               </p>
               <p className="text-base text-gray-400 font-normal">
-                Graphic Designer
+                I am working as Forex 02 hero virtual assistant so if anyone has
+                any problem please let me know or call me directly.
               </p>
             </div>
 
@@ -105,16 +111,17 @@ const Teams = () => {
             <div className="mb-8">
               <img
                 className="object-center object-cover rounded-full h-36 w-36"
-                src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1170&q=80"
+                src={ajijul}
                 alt=""
               />
             </div>
             <div className="text-center">
               <p className="text-xl text-gray-700 font-bold mb-2">
-                Lucy Carter
+                Engineer Azizul Haque
               </p>
               <p className="text-base text-gray-400 font-normal">
-                Graphic Designer
+                I am working as Forex 02 hero virtual assistant so if anyone has
+                any problem please let me know or call me directly.
               </p>
             </div>
 
@@ -132,16 +139,17 @@ const Teams = () => {
             <div className="mb-8">
               <img
                 className="object-center object-cover rounded-full h-36 w-36"
-                src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1170&q=80"
+                src={ajijul2}
                 alt=""
               />
             </div>
             <div className="text-center">
               <p className="text-xl text-gray-700 font-bold mb-2">
-                Lucy Carter
+                Engineer Azizul Haque
               </p>
               <p className="text-base text-gray-400 font-normal">
-                Graphic Designer
+                I am working as Forex 02 hero virtual assistant so if anyone has
+                any problem please let me know or call me directly.
               </p>
             </div>
 
@@ -159,16 +167,17 @@ const Teams = () => {
             <div className="mb-8">
               <img
                 className="object-center object-cover rounded-full h-36 w-36"
-                src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1170&q=80"
+                src={ajijul}
                 alt=""
               />
             </div>
             <div className="text-center">
               <p className="text-xl text-gray-700 font-bold mb-2">
-                Lucy Carter
+                Engineer Azizul Haque
               </p>
               <p className="text-base text-gray-400 font-normal">
-                Graphic Designer
+                I am working as Forex 02 hero virtual assistant so if anyone has
+                any problem please let me know or call me directly.
               </p>
             </div>
 
@@ -186,16 +195,17 @@ const Teams = () => {
             <div className="mb-8">
               <img
                 className="object-center object-cover rounded-full h-36 w-36"
-                src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1170&q=80"
+                src={ajijul2}
                 alt=""
               />
             </div>
             <div className="text-center">
               <p className="text-xl text-gray-700 font-bold mb-2">
-                Lucy Carter
+                Engineer Azizul Haque
               </p>
               <p className="text-base text-gray-400 font-normal">
-                Graphic Designer
+                I am working as Forex 02 hero virtual assistant so if anyone has
+                any problem please let me know or call me directly.
               </p>
             </div>
 
@@ -213,16 +223,17 @@ const Teams = () => {
             <div className="mb-8">
               <img
                 className="object-center object-cover rounded-full h-36 w-36"
-                src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1170&q=80"
+                src={ajijul}
                 alt=""
               />
             </div>
             <div className="text-center">
               <p className="text-xl text-gray-700 font-bold mb-2">
-                Lucy Carter
+                Engineer Azizul Haque
               </p>
               <p className="text-base text-gray-400 font-normal">
-                Graphic Designer
+                I am working as Forex 02 hero virtual assistant so if anyone has
+                any problem please let me know or call me directly.
               </p>
             </div>
 
@@ -240,16 +251,17 @@ const Teams = () => {
             <div className="mb-8">
               <img
                 className="object-center object-cover rounded-full h-36 w-36"
-                src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1170&q=80"
+                src={ajijul2}
                 alt=""
               />
             </div>
             <div className="text-center">
               <p className="text-xl text-gray-700 font-bold mb-2">
-                Lucy Carter
+                Engineer Azizul Haque
               </p>
               <p className="text-base text-gray-400 font-normal">
-                Graphic Designer
+                I am working as Forex 02 hero virtual assistant so if anyone has
+                any problem please let me know or call me directly.
               </p>
             </div>
 
@@ -267,16 +279,17 @@ const Teams = () => {
             <div className="mb-8">
               <img
                 className="object-center object-cover rounded-full h-36 w-36"
-                src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1170&q=80"
+                src={ajijul}
                 alt=""
               />
             </div>
             <div className="text-center">
               <p className="text-xl text-gray-700 font-bold mb-2">
-                Lucy Carter
+                Engineer Azizul Haque
               </p>
               <p className="text-base text-gray-400 font-normal">
-                Graphic Designer
+                I am working as Forex 02 hero virtual assistant so if anyone has
+                any problem please let me know or call me directly.
               </p>
             </div>
 
@@ -294,16 +307,17 @@ const Teams = () => {
             <div className="mb-8">
               <img
                 className="object-center object-cover rounded-full h-36 w-36"
-                src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1170&q=80"
+                src={ajijul2}
                 alt=""
               />
             </div>
             <div className="text-center">
               <p className="text-xl text-gray-700 font-bold mb-2">
-                Lucy Carter
+                Engineer Azizul Haque
               </p>
               <p className="text-base text-gray-400 font-normal">
-                Graphic Designer
+                I am working as Forex 02 hero virtual assistant so if anyone has
+                any problem please let me know or call me directly.
               </p>
             </div>
 
@@ -321,16 +335,17 @@ const Teams = () => {
             <div className="mb-8">
               <img
                 className="object-center object-cover rounded-full h-36 w-36"
-                src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1170&q=80"
+                src={ajijul}
                 alt=""
               />
             </div>
             <div className="text-center">
               <p className="text-xl text-gray-700 font-bold mb-2">
-                Lucy Carter
+                Engineer Azizul Haque
               </p>
               <p className="text-base text-gray-400 font-normal">
-                Graphic Designer
+                I am working as Forex 02 hero virtual assistant so if anyone has
+                any problem please let me know or call me directly.
               </p>
             </div>
 
@@ -348,16 +363,17 @@ const Teams = () => {
             <div className="mb-8">
               <img
                 className="object-center object-cover rounded-full h-36 w-36"
-                src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1170&q=80"
+                src={ajijul2}
                 alt=""
               />
             </div>
             <div className="text-center">
               <p className="text-xl text-gray-700 font-bold mb-2">
-                Lucy Carter
+                Engineer Azizul Haque
               </p>
               <p className="text-base text-gray-400 font-normal">
-                Graphic Designer
+                I am working as Forex 02 hero virtual assistant so if anyone has
+                any problem please let me know or call me directly.
               </p>
             </div>
 
