@@ -1,6 +1,14 @@
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 
+// react icons
+import {
+  FaFacebookF,
+  FaInstagram,
+  FaTelegram,
+  FaTwitter,
+} from "react-icons/fa";
+
 import "swiper/css/bundle";
 
 // import required modules
@@ -36,200 +44,328 @@ const Teams = () => {
         modules={[Autoplay]}
         className="mySwiper"
       >
+    
         <SwiperSlide>
           {" "}
-          <div className=" rounded overflow-hidden text-center py-10  shadow-indigo-500">
-            <div className="avatar">
-              <div className="w-24 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
-                <img src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
-              </div>
-            </div>{" "}
-            <div className="px-6 py-4">
-              <div className="font-bold text-white text-xl mb-2">Md Ajijul</div>
-              <p className="text-gray-200 text-base max-w-sm mx-auto">
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Quibusdam, neque?
+          <div className="w-full bg-white rounded-lg p-12 flex flex-col justify-center items-center">
+            <div className="mb-8">
+              <img
+                className="object-center object-cover rounded-full h-36 w-36"
+                src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1170&q=80"
+                alt=""
+              />
+            </div>
+            <div className="text-center">
+              <p className="text-xl text-gray-700 font-bold mb-2">
+                Lucy Carter
               </p>
+              <p className="text-base text-gray-400 font-normal">
+                Graphic Designer
+              </p>
+            </div>
+
+            <div className="flex items-center mt-6 space-x-5">
+              <FaFacebookF />
+              <FaTwitter />
+              <FaTelegram />
+              <FaInstagram />
             </div>
           </div>
         </SwiperSlide>
         <SwiperSlide>
           {" "}
-          <div className=" rounded overflow-hidden text-center py-10 shadow-lg">
-            <div className="avatar">
-              <div className="w-24 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
-                <img src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
-              </div>
-            </div>{" "}
-            <div className="px-6 py-4">
-              <div className="font-bold text-white text-xl mb-2">Md Ajijul</div>
-              <p className="text-gray-200 text-base max-w-sm mx-auto">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas
-                harum quis possimus velit consectetur minima veritatis debitis
-                nemo provident voluptatem.
+          <div className="w-full bg-white rounded-lg p-12 flex flex-col justify-center items-center">
+            <div className="mb-8">
+              <img
+                className="object-center object-cover rounded-full h-36 w-36"
+                src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1170&q=80"
+                alt=""
+              />
+            </div>
+            <div className="text-center">
+              <p className="text-xl text-gray-700 font-bold mb-2">
+                Lucy Carter
               </p>
+              <p className="text-base text-gray-400 font-normal">
+                Graphic Designer
+              </p>
+            </div>
+
+            <div className="flex items-center mt-6 space-x-5">
+              <FaFacebookF />
+              <FaTwitter />
+              <FaTelegram />
+              <FaInstagram />
             </div>
           </div>
         </SwiperSlide>
         <SwiperSlide>
           {" "}
-          <div className=" rounded overflow-hidden text-center py-10 shadow-lg">
-            <div className="avatar">
-              <div className="w-24 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
-                <img src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
-              </div>
-            </div>{" "}
-            <div className="px-6 py-4">
-              <div className="font-bold text-white text-xl mb-2">Md Ajijul</div>
-              <p className="text-gray-200 text-base max-w-sm mx-auto">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas
-                harum quis possimus velit consectetur minima veritatis debitis
-                nemo provident voluptatem.
+          <div className="w-full bg-white rounded-lg p-12 flex flex-col justify-center items-center">
+            <div className="mb-8">
+              <img
+                className="object-center object-cover rounded-full h-36 w-36"
+                src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1170&q=80"
+                alt=""
+              />
+            </div>
+            <div className="text-center">
+              <p className="text-xl text-gray-700 font-bold mb-2">
+                Lucy Carter
               </p>
+              <p className="text-base text-gray-400 font-normal">
+                Graphic Designer
+              </p>
+            </div>
+
+            <div className="flex items-center mt-6 space-x-5">
+              <FaFacebookF />
+              <FaTwitter />
+              <FaTelegram />
+              <FaInstagram />
             </div>
           </div>
         </SwiperSlide>
         <SwiperSlide>
           {" "}
-          <div className=" rounded overflow-hidden text-center py-10 shadow-lg">
-            <div className="avatar">
-              <div className="w-24 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
-                <img src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
-              </div>
-            </div>{" "}
-            <div className="px-6 py-4">
-              <div className="font-bold text-white text-xl mb-2">Md Ajijul</div>
-              <p className="text-gray-200 text-base max-w-sm mx-auto">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas
-                harum quis possimus velit consectetur minima veritatis debitis
-                nemo provident voluptatem.
+          <div className="w-full bg-white rounded-lg p-12 flex flex-col justify-center items-center">
+            <div className="mb-8">
+              <img
+                className="object-center object-cover rounded-full h-36 w-36"
+                src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1170&q=80"
+                alt=""
+              />
+            </div>
+            <div className="text-center">
+              <p className="text-xl text-gray-700 font-bold mb-2">
+                Lucy Carter
               </p>
+              <p className="text-base text-gray-400 font-normal">
+                Graphic Designer
+              </p>
+            </div>
+
+            <div className="flex items-center mt-6 space-x-5">
+              <FaFacebookF />
+              <FaTwitter />
+              <FaTelegram />
+              <FaInstagram />
             </div>
           </div>
         </SwiperSlide>
         <SwiperSlide>
           {" "}
-          <div className=" rounded overflow-hidden text-center py-10 shadow-lg">
-            <div className="avatar">
-              <div className="w-24 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
-                <img src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
-              </div>
-            </div>{" "}
-            <div className="px-6 py-4">
-              <div className="font-bold text-white text-xl mb-2">Md Ajijul</div>
-              <p className="text-gray-200 text-base max-w-sm mx-auto">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas
-                harum quis possimus velit consectetur minima veritatis debitis
-                nemo provident voluptatem.
+          <div className="w-full bg-white rounded-lg p-12 flex flex-col justify-center items-center">
+            <div className="mb-8">
+              <img
+                className="object-center object-cover rounded-full h-36 w-36"
+                src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1170&q=80"
+                alt=""
+              />
+            </div>
+            <div className="text-center">
+              <p className="text-xl text-gray-700 font-bold mb-2">
+                Lucy Carter
               </p>
+              <p className="text-base text-gray-400 font-normal">
+                Graphic Designer
+              </p>
+            </div>
+
+            <div className="flex items-center mt-6 space-x-5">
+              <FaFacebookF />
+              <FaTwitter />
+              <FaTelegram />
+              <FaInstagram />
             </div>
           </div>
         </SwiperSlide>
         <SwiperSlide>
           {" "}
-          <div className=" rounded overflow-hidden text-center py-10 shadow-lg">
-            <div className="avatar">
-              <div className="w-24 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
-                <img src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
-              </div>
-            </div>{" "}
-            <div className="px-6 py-4">
-              <div className="font-bold text-white text-xl mb-2">Md Ajijul</div>
-              <p className="text-gray-200 text-base max-w-sm mx-auto">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas
-                harum quis possimus velit consectetur minima veritatis debitis
-                nemo provident voluptatem.
+          <div className="w-full bg-white rounded-lg p-12 flex flex-col justify-center items-center">
+            <div className="mb-8">
+              <img
+                className="object-center object-cover rounded-full h-36 w-36"
+                src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1170&q=80"
+                alt=""
+              />
+            </div>
+            <div className="text-center">
+              <p className="text-xl text-gray-700 font-bold mb-2">
+                Lucy Carter
               </p>
+              <p className="text-base text-gray-400 font-normal">
+                Graphic Designer
+              </p>
+            </div>
+
+            <div className="flex items-center mt-6 space-x-5">
+              <FaFacebookF />
+              <FaTwitter />
+              <FaTelegram />
+              <FaInstagram />
             </div>
           </div>
         </SwiperSlide>
         <SwiperSlide>
           {" "}
-          <div className=" rounded overflow-hidden text-center py-10 shadow-lg">
-            <div className="avatar">
-              <div className="w-24 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
-                <img src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
-              </div>
-            </div>{" "}
-            <div className="px-6 py-4">
-              <div className="font-bold text-white text-xl mb-2">Md Ajijul</div>
-              <p className="text-gray-200 text-base max-w-sm mx-auto">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas
-                harum quis possimus velit consectetur minima veritatis debitis
-                nemo provident voluptatem.
+          <div className="w-full bg-white rounded-lg p-12 flex flex-col justify-center items-center">
+            <div className="mb-8">
+              <img
+                className="object-center object-cover rounded-full h-36 w-36"
+                src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1170&q=80"
+                alt=""
+              />
+            </div>
+            <div className="text-center">
+              <p className="text-xl text-gray-700 font-bold mb-2">
+                Lucy Carter
               </p>
+              <p className="text-base text-gray-400 font-normal">
+                Graphic Designer
+              </p>
+            </div>
+
+            <div className="flex items-center mt-6 space-x-5">
+              <FaFacebookF />
+              <FaTwitter />
+              <FaTelegram />
+              <FaInstagram />
             </div>
           </div>
         </SwiperSlide>
         <SwiperSlide>
           {" "}
-          <div className=" rounded overflow-hidden text-center py-10 shadow-lg">
-            <div className="avatar">
-              <div className="w-24 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
-                <img src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
-              </div>
-            </div>{" "}
-            <div className="px-6 py-4">
-              <div className="font-bold text-white text-xl mb-2">Md Ajijul</div>
-              <p className="text-gray-200 text-base max-w-sm mx-auto">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas
-                harum quis possimus velit consectetur minima veritatis debitis
-                nemo provident voluptatem.
+          <div className="w-full bg-white rounded-lg p-12 flex flex-col justify-center items-center">
+            <div className="mb-8">
+              <img
+                className="object-center object-cover rounded-full h-36 w-36"
+                src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1170&q=80"
+                alt=""
+              />
+            </div>
+            <div className="text-center">
+              <p className="text-xl text-gray-700 font-bold mb-2">
+                Lucy Carter
               </p>
+              <p className="text-base text-gray-400 font-normal">
+                Graphic Designer
+              </p>
+            </div>
+
+            <div className="flex items-center mt-6 space-x-5">
+              <FaFacebookF />
+              <FaTwitter />
+              <FaTelegram />
+              <FaInstagram />
             </div>
           </div>
         </SwiperSlide>
         <SwiperSlide>
           {" "}
-          <div className=" rounded overflow-hidden text-center py-10 shadow-lg">
-            <div className="avatar">
-              <div className="w-24 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
-                <img src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
-              </div>
-            </div>{" "}
-            <div className="px-6 py-4">
-              <div className="font-bold text-white text-xl mb-2">Md Ajijul</div>
-              <p className="text-gray-200 text-base max-w-sm mx-auto">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas
-                harum quis possimus velit consectetur minima veritatis debitis
-                nemo provident voluptatem.
+          <div className="w-full bg-white rounded-lg p-12 flex flex-col justify-center items-center">
+            <div className="mb-8">
+              <img
+                className="object-center object-cover rounded-full h-36 w-36"
+                src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1170&q=80"
+                alt=""
+              />
+            </div>
+            <div className="text-center">
+              <p className="text-xl text-gray-700 font-bold mb-2">
+                Lucy Carter
               </p>
+              <p className="text-base text-gray-400 font-normal">
+                Graphic Designer
+              </p>
+            </div>
+
+            <div className="flex items-center mt-6 space-x-5">
+              <FaFacebookF />
+              <FaTwitter />
+              <FaTelegram />
+              <FaInstagram />
             </div>
           </div>
         </SwiperSlide>
         <SwiperSlide>
           {" "}
-          <div className=" rounded overflow-hidden text-center py-10 shadow-lg">
-            <div className="avatar">
-              <div className="w-24 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
-                <img src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
-              </div>
-            </div>{" "}
-            <div className="px-6 py-4">
-              <div className="font-bold text-white text-xl mb-2">Md Ajijul</div>
-              <p className="text-gray-200 text-base max-w-sm mx-auto">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas
-                harum quis possimus velit consectetur minima veritatis debitis
-                nemo provident voluptatem.
+          <div className="w-full bg-white rounded-lg p-12 flex flex-col justify-center items-center">
+            <div className="mb-8">
+              <img
+                className="object-center object-cover rounded-full h-36 w-36"
+                src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1170&q=80"
+                alt=""
+              />
+            </div>
+            <div className="text-center">
+              <p className="text-xl text-gray-700 font-bold mb-2">
+                Lucy Carter
               </p>
+              <p className="text-base text-gray-400 font-normal">
+                Graphic Designer
+              </p>
+            </div>
+
+            <div className="flex items-center mt-6 space-x-5">
+              <FaFacebookF />
+              <FaTwitter />
+              <FaTelegram />
+              <FaInstagram />
             </div>
           </div>
         </SwiperSlide>
         <SwiperSlide>
           {" "}
-          <div className=" rounded overflow-hidden text-center py-10 shadow-lg">
-            <div className="avatar">
-              <div className="w-24 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
-                <img src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
-              </div>
-            </div>{" "}
-            <div className="px-6 py-4">
-              <div className="font-bold text-white text-xl mb-2">Md Ajijul</div>
-              <p className="text-gray-200 text-base max-w-sm mx-auto">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas
-                harum quis possimus velit consectetur minima veritatis debitis
-                nemo provident voluptatem.
+          <div className="w-full bg-white rounded-lg p-12 flex flex-col justify-center items-center">
+            <div className="mb-8">
+              <img
+                className="object-center object-cover rounded-full h-36 w-36"
+                src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1170&q=80"
+                alt=""
+              />
+            </div>
+            <div className="text-center">
+              <p className="text-xl text-gray-700 font-bold mb-2">
+                Lucy Carter
               </p>
+              <p className="text-base text-gray-400 font-normal">
+                Graphic Designer
+              </p>
+            </div>
+
+            <div className="flex items-center mt-6 space-x-5">
+              <FaFacebookF />
+              <FaTwitter />
+              <FaTelegram />
+              <FaInstagram />
+            </div>
+          </div>
+        </SwiperSlide>
+        <SwiperSlide>
+          {" "}
+          <div className="w-full bg-white rounded-lg p-12 flex flex-col justify-center items-center">
+            <div className="mb-8">
+              <img
+                className="object-center object-cover rounded-full h-36 w-36"
+                src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1170&q=80"
+                alt=""
+              />
+            </div>
+            <div className="text-center">
+              <p className="text-xl text-gray-700 font-bold mb-2">
+                Lucy Carter
+              </p>
+              <p className="text-base text-gray-400 font-normal">
+                Graphic Designer
+              </p>
+            </div>
+
+            <div className="flex items-center mt-6 space-x-5">
+              <FaFacebookF />
+              <FaTwitter />
+              <FaTelegram />
+              <FaInstagram />
             </div>
           </div>
         </SwiperSlide>
