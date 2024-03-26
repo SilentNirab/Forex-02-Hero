@@ -42,7 +42,7 @@ const Register = () => {
   };
 
   return (
-    <div className="bg-white">
+    <div className="min-h-[80vh] bg-white">
       <Helmet>
         <title> Forex 02 Hero | Registration</title>
       </Helmet>
