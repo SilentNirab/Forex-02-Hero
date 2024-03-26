@@ -4,8 +4,9 @@ import { useForm } from "react-hook-form"
 import { FaRegEye, FaRegEyeSlash } from 'react-icons/fa';
 import loginBg from '../../assets/images/login.webp'
 import { Link, useNavigate } from 'react-router-dom';
-import useAuth from '../../hooks/useAuth';
 import toast, { Toaster } from 'react-hot-toast';
+import useAuth from '../../hooks/useAuth';
+
 const Login = () => {
     const { signIn, resetpass } = useAuth();
     const navigate = useNavigate();

@@ -2,6 +2,7 @@ import { FcMenu } from "react-icons/fc";
 import { NavLink, Outlet } from "react-router-dom";
 import useAdmin from "../../hooks/useAdmin";
 
+
 const Dashboard = () => {
     const [isAdmin] = useAdmin();
     return (
@@ -21,18 +22,22 @@ const Dashboard = () => {
                 </div>
                 <div className="drawer-side">
                     <label htmlFor="my-drawer-2" aria-label="close sidebar" className="drawer-overlay"></label>
-                    <ul className="menu p-4 space-y-4 w-80 min-h-full bg-green-700 text-white">
+                    <ul className="menu text-md pt-10 space-y-4 w-80 min-h-full bg-green-700 text-white">
                         {/* Sidebar content here */}
                         {
                             isAdmin ?
                                 <>
-                                    <li>
+                                    <li className="w-full">
                                         <NavLink to="/dashboard/allusers">
                                             Users</NavLink>
                                     </li>
                                     <li>
                                         <NavLink to="/dashboard/addpost">
                                             Add Post</NavLink>
+                                    </li>
+                                    <li>
+                                        <NavLink to="/dashboard/allposts">
+                                            All Posts</NavLink>
                                     </li>
                                     {/* shared nav links */}
                                     <div className="divider"></div>

@@ -4,9 +4,9 @@ import { FaRegEye, FaRegEyeSlash } from "react-icons/fa";
 import loginBg from "../../assets/images/login.webp";
 import { Link, useNavigate } from "react-router-dom";
 import { Helmet } from "react-helmet";
-import useAuth from "../../hooks/useAuth";
 import useAxios from "../../hooks/useAxios";
 import toast, { Toaster } from "react-hot-toast";
+import useAuth from "../../hooks/useAuth";
 const Register = () => {
   const { createUser } = useAuth();
   const {
@@ -22,7 +22,8 @@ const Register = () => {
       name: data.name,
       email: data.email,
       clientId: data.clientId,
-      role: "user"
+      role: "user",
+      registrationTime: new Date().toISOString(),
     };
     console.log(data);
     createUser(data.email, data.password)

@@ -10,6 +10,8 @@ import AboutUs from "../Pages/AboutUs/AboutUs";
 import AllUsers from "../Pages/Dashboard/AllUser/Alluser";
 import AddPost from "../Pages/Dashboard/AddPost/AddPost";
 import AdminProfile from "../Pages/Dashboard/AdminProfile/AdminProfile";
+import AllPots from "../Pages/Dashboard/AllPosts/AllPosts";
+import PrivateRoute from "./PriveteRoute";
 
 export const router = createBrowserRouter([
   {
@@ -47,15 +49,19 @@ export const router = createBrowserRouter([
     children: [
       {
         path: "/dashboard/",
-        element: <AdminProfile></AdminProfile>
+        element: <PrivateRoute><AdminProfile></AdminProfile></PrivateRoute>
       },
       {
         path: '/dashboard/allusers',
-        element:<AllUsers></AllUsers>
+        element:<PrivateRoute><AllUsers></AllUsers></PrivateRoute>
       },
       {
         path: "/dashboard/addpost",
-        element: <AddPost></AddPost>
+        element: <PrivateRoute><AddPost></AddPost></PrivateRoute>
+      },
+      {
+        path: "/dashboard/allposts",
+        element: <PrivateRoute><AllPots></AllPots></PrivateRoute>
       }
   ],
   },

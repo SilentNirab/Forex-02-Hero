@@ -1,5 +1,5 @@
 /* eslint-disable react/no-unescaped-entities */
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import logo from "../../../assets/images/logo-transparent.png";
 
 const Footer = () => {
@@ -52,24 +52,24 @@ const Footer = () => {
         </aside>
         <nav>
           <h6 className="text-xl font-bold text-white">Services</h6>
-          <a className="link link-hover">Branding</a>
-          <a className="link link-hover">Blogs</a>
-          <a className="link link-hover">Marketing</a>
-          <a className="link link-hover">Advertisement</a>
+          <Link className="link link-hover">Branding</Link>
+          <Link className="link link-hover">Blogs</Link>
+          <Link className="link link-hover">Marketing</Link>
+          <Link className="link link-hover">Advertisement</Link>
         </nav>
         <nav>
           <h6 className="text-xl font-bold text-white">Company</h6>
-          <a className="link link-hover">
+          <Link className="link link-hover">
             <NavLink to={"/aboutUs"}>About us</NavLink>
-          </a>
-          <a className="link link-hover">Contact</a>
-          <a className="link link-hover">Broker</a>
+          </Link>
+          <Link className="link link-hover">Contact</Link>
+          <Link className="link link-hover">Broker</Link>
         </nav>
         <nav>
           <h6 className="text-xl font-bold text-white">Members</h6>
-          <a className="link link-hover">
+          <Link className="link link-hover">
             <NavLink to={"/register"}>Register Now</NavLink>
-          </a>
+          </Link>
         </nav>
       </footer>
       <div className="text-center pb-10">
