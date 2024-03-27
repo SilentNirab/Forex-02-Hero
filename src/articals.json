@@ -1,0 +1,38 @@
+[
+  {
+    "id": "001",
+    "title": "Tailwind CSS Banner",
+    "image": "https://t3.ftcdn.net/jpg/05/85/33/24/360_F_585332472_NXIwwkCBvdqr7HDnLxFFQpuxWr6BxuEE.jpg",
+    "paragraph": "Create stunning banners with Tailwind CSS gradients. Simplify design with a wide range of gradient options for eye-catching banners."
+  },
+  {
+    "id": "002",
+    "title": "Responsive Design",
+    "image": "https://t3.ftcdn.net/jpg/05/85/33/24/360_F_585332472_NXIwwkCBvdqr7HDnLxFFQpuxWr6BxuEE.jpg",
+    "paragraph": "Ensure your website looks great on all devices. Employ responsive design principles for a seamless experience across desktops, tablets, and smartphones."
+  },
+  {
+    "id": "003",
+    "title": "Dynamic Content",
+    "image": "https://t3.ftcdn.net/jpg/05/85/33/24/360_F_585332472_NXIwwkCBvdqr7HDnLxFFQpuxWr6BxuEE.jpg",
+    "paragraph": "Easily update and manage dynamic content. Personalize user experiences with real-time information using dynamic scripting languages and content management systems."
+  },
+  {
+    "id": "004",
+    "title": "Mobile Optimization",
+    "image": "https://t3.ftcdn.net/jpg/05/85/33/24/360_F_585332472_NXIwwkCBvdqr7HDnLxFFQpuxWr6BxuEE.jpg",
+    "paragraph": "Optimize your website for mobile users. Implement responsive design and optimize images to provide a user-friendly experience on mobile devices."
+  },
+  {
+    "id": "005",
+    "title": "SEO Friendly",
+    "image": "https://t3.ftcdn.net/jpg/05/85/33/24/360_F_585332472_NXIwwkCBvdqr7HDnLxFFQpuxWr6BxuEE.jpg",
+    "paragraph": "Improve visibility with built-in SEO features. Optimize meta tags, keywords, and content structure to boost ranking on search engine results pages."
+  },
+  {
+    "id": "006",
+    "title": "User Interaction",
+    "image": "https://t3.ftcdn.net/jpg/05/85/33/24/360_F_585332472_NXIwwkCBvdqr7HDnLxFFQpuxWr6BxuEE.jpg",
+    "paragraph": "Engage users with interactive elements. Incorporate forms, sliders, and animations for a more immersive and enjoyable user experience, enhancing retention and conversions."
+  }
+]
