@@ -11,7 +11,11 @@ import AllUsers from "../Pages/Dashboard/AllUser/Alluser";
 import AddPost from "../Pages/Dashboard/AddPost/AddPost";
 import AdminProfile from "../Pages/Dashboard/AdminProfile/AdminProfile";
 import AllPots from "../Pages/Dashboard/AllPosts/AllPosts";
+import AdminRoute from "./AdminRoute";
+import ClientRoute from "./ClientRoute";
 import PrivateRoute from "./PriveteRoute";
+import BrakingNews from "../Pages/Dashboard/BreakingNews/BreakingNews";
+import AllNews from "../Pages/Dashboard/AllNews/AllNews";
 
 export const router = createBrowserRouter([
   {
@@ -34,7 +38,7 @@ export const router = createBrowserRouter([
 
       {
         path: "blogs",
-        element: <Blogs></Blogs>,
+        element: <PrivateRoute><ClientRoute><Blogs></Blogs></ClientRoute></PrivateRoute>,
       },
       {
         path: "aboutUs",
@@ -49,19 +53,27 @@ export const router = createBrowserRouter([
     children: [
       {
         path: "/dashboard/",
-        element: <PrivateRoute><AdminProfile></AdminProfile></PrivateRoute>
+        element: <AdminRoute><AdminProfile></AdminProfile></AdminRoute>
       },
       {
         path: '/dashboard/allusers',
-        element:<PrivateRoute><AllUsers></AllUsers></PrivateRoute>
+        element:<AdminRoute><AllUsers></AllUsers></AdminRoute>
       },
       {
         path: "/dashboard/addpost",
-        element: <PrivateRoute><AddPost></AddPost></PrivateRoute>
+        element: <AdminRoute><AddPost></AddPost></AdminRoute>
       },
       {
         path: "/dashboard/allposts",
-        element: <PrivateRoute><AllPots></AllPots></PrivateRoute>
+        element: <AdminRoute><AllPots></AllPots></AdminRoute>
+      },
+      {
+        path: "/dashboard/addnews",
+        element: <AdminRoute><BrakingNews></BrakingNews></AdminRoute>
+      },
+      {
+        path: "/dashboard/allnews",
+        element: <AdminRoute><AllNews></AllNews></AdminRoute>
       }
   ],
   },

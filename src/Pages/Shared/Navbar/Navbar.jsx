@@ -120,12 +120,14 @@ const Navbar = () => {
             <ul className=" menu-horizontal px-1 space-x-4">{NavNavLinks}</ul>
           </div>
           <div className="navbar-end gap-x-2">
-            {
+         <div className=" ">
+         {
               user ?
                 <button onClick={handelDelete} className="transition ease-in-out  px-4 py-2 text-black rounded-md font-medium hover:bg-black hover:text-white duration-500">Logout</button>
                 :
                 <NavLink to={"/login"}><button className="  px-4 py-2  rounded-md font-medium duration-500 bg-[#0D1821] transition ease-in-out  my-2 hover:bg-green-500 text-white  col-span-2">Login</button></NavLink>
             }
+         </div>
             <NavLink to={"/register"}>
               <button className="transition ease-in-out px-4 py-2 bg-green-500 text-white rounded-md font-medium hover:bg-green-600 duration-500">
                 Register Now

@@ -4,7 +4,7 @@ import logo from "../../../assets/images/logo-transparent.png";
 
 const Footer = () => {
   return (
-    <div className="px-10 text-white bg-green-950">
+    <div className="px-10 text-white bg-gray-900">
       <div className="text-md py-8">
         <p>
           <span className="font-bold">Disclaimer:</span> Any Advice or
