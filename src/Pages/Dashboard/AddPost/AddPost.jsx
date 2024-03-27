@@ -48,8 +48,6 @@ const AddPost = () => {
             console.error("Error adding post:", error);
         });
             })
-
-        
     }
     return (
 
