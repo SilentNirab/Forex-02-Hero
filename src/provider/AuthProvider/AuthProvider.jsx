@@ -5,7 +5,6 @@ import app from "../../firebase/firebase.config.js"
 
 export const AuthContext = createContext(null)
 
-
 const AuthProvider = ({ children }) => {
     const [user, setUser] = useState();
     const [loading, setLoading] = useState(true);

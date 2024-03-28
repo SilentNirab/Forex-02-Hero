@@ -2,7 +2,7 @@ import { useQuery } from "@tanstack/react-query";
 import { FaTrashAlt, FaUsers } from "react-icons/fa";
 import Swal from "sweetalert2";
 import useAxios from "../../../hooks/useAxios";
-
+import { format } from 'timeago.js';
 const AllUsers = () => {
     const publicAxios = useAxios();
     const { data: users = [], refetch } = useQuery({
@@ -75,6 +75,7 @@ const AllUsers = () => {
                             <th>Name</th>
                             <th>Email</th>
                             <th>Client Id</th>
+                            <th>Registration Time</th>
                             <th>Role</th>
                             <th>Action</th>
                         </tr>
@@ -86,6 +87,8 @@ const AllUsers = () => {
                                 <td>{user.name}</td>
                                 <td>{user.email}</td>
                                 <td>{user.clientId}</td>
+                                <td>{format(user.registrationTime)}</td>
+
                                 <td>
                                     {user.role === 'admin' ? 'Admin' : user.role === 'client' ? 'Client' : (
                                         <div className="flex justify-start">

@@ -3,7 +3,6 @@ import useAuth from "../hooks/useAuth";
 
 
 
-
 // eslint-disable-next-line react/prop-types
 const PrivateRoute = ({ children }) => {
     const { user, loading } = useAuth();
@@ -11,7 +10,7 @@ const PrivateRoute = ({ children }) => {
 
     if (loading) {
         return <div className="flex items-center justify-center min-h-screen">
-            <span className="loading loading-bars loading-lg text-warning mx-auto"></span>
+            <span className="loading loading-bars loading-lg text-green-400 mx-auto"></span>
         </div>
 
     }
