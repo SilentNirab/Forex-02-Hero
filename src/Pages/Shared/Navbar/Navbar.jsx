@@ -1,22 +1,15 @@
 import { NavLink } from "react-router-dom";
 import Container from "../../../Components/Container/Container";
-import logo from "../../../assets/images/logo-transparent-CROP.png"
+import logo from "../../../assets/images/logo-transparent-CROP.png";
 import useAuth from "../../../hooks/useAuth";
 import useAdmin from "../../../hooks/useAdmin";
-
-
-
 
 const Navbar = () => {
   const { logOut, user } = useAuth();
   const [isAdmin] = useAdmin();
   const handelDelete = () => {
-    logOut()
-      .then(
-        console.log("logout done")
-
-      )
-  }
+    logOut().then(console.log("logout done"));
+  };
   const NavNavLinks = (
     <>
       <li className="font-bold text-lg">
@@ -26,8 +19,8 @@ const Navbar = () => {
             isActive
               ? "border-green-500 border-b-2  py-1"
               : isPending
-                ? "pending "
-                : ""
+              ? "pending "
+              : ""
           }
         >
           HOME
@@ -40,8 +33,8 @@ const Navbar = () => {
             isActive
               ? "border-green-500 border-b-2  py-1"
               : isPending
-                ? "pending "
-                : ""
+              ? "pending "
+              : ""
           }
         >
           BLOGS
@@ -54,33 +47,31 @@ const Navbar = () => {
             isActive
               ? "border-green-500 border-b-2  py-1"
               : isPending
-                ? "pending "
-                : ""
+              ? "pending "
+              : ""
           }
         >
           ABOUT US
         </NavLink>
       </li>
-      {
-        isAdmin ? 
+      {isAdmin ? (
         <li className="font-bold text-lg">
-        <NavLink
-          to={"/dashboard"}
-          className={({ isActive, isPending }) =>
-            isActive
-              ? "border-green-500 border-b-2  py-1"
-              : isPending
+          <NavLink
+            to={"/dashboard"}
+            className={({ isActive, isPending }) =>
+              isActive
+                ? "border-green-500 border-b-2  py-1"
+                : isPending
                 ? "pending "
                 : ""
-          }
-        >
-          DASHBOARD
-        </NavLink>
-      </li> 
-      : 
-      ""
-      }
-
+            }
+          >
+            DASHBOARD
+          </NavLink>
+        </li>
+      ) : (
+        ""
+      )}
     </>
   );
   return (
@@ -110,24 +101,56 @@ const Navbar = () => {
                 className=" menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
               >
                 {NavNavLinks}
+                <li className=" ">
+                  {user ? (
+                    <button
+                      onClick={handelDelete}
+                      className="inline-block sm:hidden transition ease-in-out  px-4 py-2 text-black rounded-md font-medium hover:bg-black hover:text-white duration-500"
+                    >
+                      Logout
+                    </button>
+                  ) : (
+                    <NavLink to={"/login"}>
+                      <button className=" inline-block sm:hidden px-4 py-2  rounded-md font-medium duration-500 bg-[#0D1821] transition ease-in-out  my-2 hover:bg-green-500 text-white  col-span-2">
+                        Login
+                      </button>
+                    </NavLink>
+                  )}
+                </li>
+                <li>
+                  {" "}
+                  <NavLink to={"/register"}>
+                    <button className="transition ease-in-out px-4 py-2 bg-green-500 text-white rounded-md font-medium hover:bg-green-600 duration-500">
+                      Register Now
+                    </button>
+                  </NavLink>
+                </li>
               </ul>
             </div>
             <NavLink to={"/"}>
-              <img className="max-h-16" src={logo} alt="" />
+              <img className="max-h-8 md:max-h-16" src={logo} alt="" />
             </NavLink>
           </div>
           <div className="navbar-center hidden lg:flex">
             <ul className=" menu-horizontal px-1 space-x-4">{NavNavLinks}</ul>
           </div>
           <div className="navbar-end gap-x-2">
-         <div className=" ">
-         {
-              user ?
-                <button onClick={handelDelete} className="transition ease-in-out  px-4 py-2 text-black rounded-md font-medium hover:bg-black hover:text-white duration-500">Logout</button>
-                :
-                <NavLink to={"/login"}><button className="  px-4 py-2  rounded-md font-medium duration-500 bg-[#0D1821] transition ease-in-out  my-2 hover:bg-green-500 text-white  col-span-2">Login</button></NavLink>
-            }
-         </div>
+            <div className=" ">
+              {user ? (
+                <button
+                  onClick={handelDelete}
+                  className="hidden sm:inline-block transition ease-in-out  px-4 py-2 text-black rounded-md font-medium hover:bg-black hover:text-white duration-500"
+                >
+                  Logout
+                </button>
+              ) : (
+                <NavLink to={"/login"}>
+                  <button className="hidden sm:inline-block  px-4 py-2  rounded-md font-medium duration-500 bg-[#0D1821] transition ease-in-out  my-2 hover:bg-green-500 text-white  col-span-2">
+                    Login
+                  </button>
+                </NavLink>
+              )}
+            </div>
             <NavLink to={"/register"}>
               <button className="transition ease-in-out px-4 py-2 bg-green-500 text-white rounded-md font-medium hover:bg-green-600 duration-500">
                 Register Now
@@ -139,6 +162,5 @@ const Navbar = () => {
     </div>
   );
 };
-
 
 export default Navbar;

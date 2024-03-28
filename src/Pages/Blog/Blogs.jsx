@@ -1,6 +1,7 @@
 import Card from "../Card/Card";
 import data from "../../articals.json";
 import Container from "../../Components/Container/Container";
+import BlogDetails from "../BlogDetails/BlogDetails";
 
 const Blogs = () => {
   const datas = data;
@@ -24,6 +25,10 @@ const Blogs = () => {
               <Card key={data.id} card={data}></Card>
             ))}
           </div>
+        </div>
+
+        <div>
+          <BlogDetails></BlogDetails>
         </div>
       </Container>
     </div>

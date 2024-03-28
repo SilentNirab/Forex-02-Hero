@@ -18,11 +18,11 @@ const Marquees = () => {
   ];
 
   return (
-    <div className="bg-gradient-to-r from-green-800 to-gray-900 mt-10 py-10 text-white  flex flex-col justify-center items-center">
+    <div className="bg-gradient-to-r from-green-800 to-gray-900 mt-10 py-5 md:py-10 text-white  flex flex-col justify-center items-center">
       <Marquee>
         {headlines.map((headline, index) => (
           <Marque key={index} text={headline}></Marque>
-          ))}
+        ))}
       </Marquee>
     </div>
   );
