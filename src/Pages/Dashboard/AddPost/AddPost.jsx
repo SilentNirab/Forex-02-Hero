@@ -12,8 +12,6 @@ const AddPost = () => {
         setContent(value);
     };
 
-
-
     const handelAddPost = e => {
         e.preventDefault();
         const form = new FormData(e.currentTarget);

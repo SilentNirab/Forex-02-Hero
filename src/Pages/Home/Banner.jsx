@@ -1,6 +1,6 @@
 import { Link, NavLink } from "react-router-dom";
 import Container from "../../Components/Container/Container";
-import banner from "../../assets/images/banner-original.png";
+import banner from "../../assets/images/banner-original.webp";
 import { MdOutlinePlayCircleOutline } from "react-icons/md";
 
 const Banner = () => {

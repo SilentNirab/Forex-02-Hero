@@ -17,7 +17,7 @@ const Broker = () => {
             />
           </div>
           <p className="text-sm px-4 md:px-8 md:text-xl">
-            Get a <span className="font-bold">30% trade credit</span> and <span className="font-bold">free VIP access</span> when you join Blueberry Markets using my link and trade a minimum of 1 lot!
+            Get a <span className="font-bold">30% trade credit</span> and <span className="font-bold">free VIP access</span> when you join dbInvesing using my link and trade a minimum of 1 lot!
           </p>
         </div>
      
