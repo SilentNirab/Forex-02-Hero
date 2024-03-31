@@ -3,54 +3,71 @@ import useAxios from "../../../hooks/useAxios";
 import { useState } from "react";
 import ReactQuill from 'react-quill';
 import 'react-quill/dist/quill.snow.css';
+import imageCompression from 'browser-image-compression'; 
 
 const AddPost = () => {
-    const publicAxios = useAxios()
+    const publicAxios = useAxios();
     const [content, setContent] = useState('');
+    const [image, setImage] = useState(null); // State to store compressed image
 
     const handleEditorChange = (value) => {
         setContent(value);
     };
 
+    const handleImageChange = async (e) => {
+        const file = e.target.files[0];
+        const options = {
+            maxSizeMB: 0.2, // Maximum size of the compressed image in megabytes (200KB)
+            maxWidthOrHeight: 1920, // Maximum width or height of the compressed image
+            useWebWorker: true // Enable Web Worker for faster compression (optional)
+        };
 
+        try {
+            const compressedImage = await imageCompression(file, options);
+            setImage(compressedImage);
+        } catch (error) {
+            console.error("Error compressing image:", error);
+        }
+    };
 
-    const handelAddPost = e => {
+    const handelAddPost = async (e) => {
         e.preventDefault();
         const form = new FormData(e.currentTarget);
         const post_title = form.get("title");
         const post_content = content;
-        const image = form.get("image");
-        const Data = new FormData()
-        Data.append("image", image)
-        fetch(`https://api.imgbb.com/1/upload?key=ce2333bf62321691c88f982c14b6daba`, {
-            method: "POST",
-            body: Data
-        })
-            .then(res => res.json())
-            .then(data => {
-                const post = { image : data.data.url, post_title, post_content };
-             // send data to the server
 
-        publicAxios.post('/posts', post)
-        .then(res => {
-            console.log(res.data);
-            if (res.data.insertedId) {
-                Swal.fire({
-                    position: "top-end",
-                    icon: "success",
-                    title: "Post added successfully",
-                    showConfirmButton: false,
-                    timer: 1500
-                })
+        if (image) {
+            const imageData = new FormData();
+            imageData.append("image", image);
+
+            try {
+                const response = await fetch(`https://api.imgbb.com/1/upload?key=ce2333bf62321691c88f982c14b6daba`, {
+                    method: "POST",
+                    body: imageData
+                });
+                const data = await response.json();
+                const post = { image: data.data.url, post_title, post_content };
+
+                // Send data to the server
+                const res = await publicAxios.post('/posts', post);
+                if (res.data.insertedId) {
+                    Swal.fire({
+                        position: "top-end",
+                        icon: "success",
+                        title: "Post added successfully",
+                        showConfirmButton: false,
+                        timer: 1500
+                    });
+                }
+            } catch (error) {
+                console.error("Error adding post:", error);
             }
-        })
-        .catch(error => {
-            console.error("Error adding post:", error);
-        });
-            })
-    }
-    return (
+        } else {
+            console.error("Please select an image.");
+        }
+    };
 
+    return (
         <div className="py-12">
             <h2 className="text-4xl text-center font-bold">Create New Post</h2>
             <div className="max-w-7xl mx-auto sm:px-6 lg:px-8">
@@ -64,7 +81,7 @@ const AddPost = () => {
 
                             <div className="mb-4">
                                 <label className="text-xl text-gray-600">Thumbnail Image</label><br />
-                                <input type="file" className="border-2 border-gray-300 p-2 w-full" name="image" id="description" required />
+                                <input type="file" className="border-2 border-gray-300 p-2 w-full" name="image" id="image" onChange={handleImageChange} required />
                             </div>
 
                             <div className="mb-8">

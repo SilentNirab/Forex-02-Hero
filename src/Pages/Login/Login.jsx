@@ -1,4 +1,3 @@
-// Login.js
 import { useRef, useState } from 'react';
 import { Helmet } from 'react-helmet';
 import { useForm } from "react-hook-form"
@@ -43,7 +42,7 @@ const Login = () => {
 
     
      return (
-    <div className="min-h-[80vh] bg-white">
+    <div className="min-h-[80vh] bg-white container">
       <Helmet>
         <title>Forex 02 Hero | Login</title>
       </Helmet>
@@ -89,6 +88,7 @@ const Login = () => {
                 {errors.password?.type === "required" && (
                   <p className="text-[#F7A582]">Password is required</p>
                 )}
+                {errorMessage && <p className="text-red-500">{errorMessage}</p>}
                 <span className="absolute top-5 right-4" onClick={() => setShowPassword(!showPassword)}>
                   {showPassword ? (
                     <FaRegEyeSlash />
