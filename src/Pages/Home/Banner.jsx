@@ -45,6 +45,13 @@ const Banner = () => {
                   </div>
                 </div>
                 {/* telegram button */}
+                <div>
+                  <Link to={"https://t.me/Forex_02_Hero"} target="blank">
+                    <button className="transition ease-in-out text-md px-4 py-2 md:px-24 md:py-4 bg-green-500 border-2 border-green-500 md:border-0 text-white rounded-md font-normal hover:bg-green-600 duration-500">
+                      Join Our Telegram
+                    </button>
+                  </Link>
+                </div>
               </div>
             </div>
           </div>

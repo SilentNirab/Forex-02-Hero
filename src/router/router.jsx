@@ -44,8 +44,8 @@ export const router = createBrowserRouter([
         element: <Blogs></Blogs>,
       },
       {
-        path: '/blogs/:id',
-        element: <BlogDetailsPage></BlogDetailsPage>
+        path: "/blogs/:id",
+        element: <BlogDetailsPage></BlogDetailsPage>,
       },
       {
         path: "aboutUs",
@@ -53,7 +53,14 @@ export const router = createBrowserRouter([
       },
       {
         path: "analysis",
-        element: <Analysis></Analysis>,
+        element: (
+          <PrivateRoute>
+            <ClientRoute>
+              {" "}
+              <Analysis></Analysis>{" "}
+            </ClientRoute>{" "}
+          </PrivateRoute>
+        ),
       },
       {
         path: "analysisDetails",

@@ -7,6 +7,7 @@ import useAdmin from "../../../hooks/useAdmin";
 const Navbar = () => {
   const { logOut, user } = useAuth();
   const [isAdmin] = useAdmin();
+
   const handelDelete = () => {
     logOut().then(console.log("logout done"));
   };
@@ -68,6 +69,7 @@ const Navbar = () => {
           ABOUT US
         </NavLink>
       </li>
+
       {isAdmin ? (
         <li className="font-bold text-lg">
           <NavLink
