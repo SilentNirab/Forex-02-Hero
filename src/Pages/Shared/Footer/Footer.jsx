@@ -1,6 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
 import { Link, NavLink } from "react-router-dom";
 import logo from "../../../assets/images/logo-transparent.png";
+import Container from "../../../Components/Container/Container";
 
 const Footer = () => {
   return (
@@ -45,19 +46,20 @@ const Footer = () => {
           results.{" "}
         </p>
       </div>
-      <footer className="footer p-10  ">
+      <Container>
+      <footer className="footer flex flex-col justify-between items-center md:flex-row md:items-start px-4 md:px-10  ">
         <aside>
           <img className="max-w-40" src={logo} alt="" />
           
         </aside>
-        <nav>
+        <nav className="flex flex-col items-center md:items-start">
           <h6 className="text-xl font-bold text-white">Services</h6>
           <Link className="link link-hover">Branding</Link>
           <Link className="link link-hover">Blogs</Link>
           <Link className="link link-hover">Marketing</Link>
           <Link className="link link-hover">Advertisement</Link>
         </nav>
-        <nav>
+        <nav  className="flex flex-col items-center md:items-start">
           <h6 className="text-xl font-bold text-white">Company</h6>
           <Link className="link link-hover">
             <NavLink to={"/aboutUs"}>About us</NavLink>
@@ -65,14 +67,15 @@ const Footer = () => {
           <Link className="link link-hover">Contact</Link>
           <Link className="link link-hover">Broker</Link>
         </nav>
-        <nav>
+        <nav className="flex flex-col items-center md:items-start">
           <h6 className="text-xl font-bold text-white">Members</h6>
           <Link className="link link-hover">
             <NavLink to={"/register"}>Register Now</NavLink>
           </Link>
         </nav>
       </footer>
-      <div className="text-center pb-10">
+      </Container>
+      <div className="text-center py-10">
       <p className="text-xl font-bold  pb-2">
             <span className="text-green-600">FOREX</span>
             <span>02</span>

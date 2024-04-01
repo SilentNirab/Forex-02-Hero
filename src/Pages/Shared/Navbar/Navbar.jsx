@@ -93,7 +93,7 @@ const Navbar = () => {
       <Container>
         <div className="navbar ">
           <div className="navbar-start">
-            <div className="dropdown">
+            <div className="dropdown ">
               <label tabIndex={0} className="btn btn-ghost lg:hidden">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -112,7 +112,7 @@ const Navbar = () => {
               </label>
               <ul
                 tabIndex={0}
-                className=" menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+                className=" menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-gray-100 rounded-box w-52"
               >
                 {NavNavLinks}
                 <li className=" ">
@@ -153,13 +153,13 @@ const Navbar = () => {
               {user ? (
                 <button
                   onClick={handelDelete}
-                  className="hidden sm:inline-block transition ease-in-out  px-4 py-2 text-black rounded-md font-medium hover:bg-black hover:text-white duration-500"
+                  className="hidden sm:inline-block transition ease-in-out  px-4 py-2 rounded-md font-medium  bg-[#0D1821] hover:bg-green-500 text-white  hover:text-white duration-500"
                 >
                   Logout
                 </button>
               ) : (
                 <NavLink to={"/login"}>
-                  <button className="hidden sm:inline-block  px-4 py-2  rounded-md font-medium duration-500 bg-[#0D1821] transition ease-in-out  my-2 hover:bg-green-500 text-white  col-span-2">
+                  <button className="hidden sm:inline-block  px-4 py-2  rounded-md font-medium duration-500 transition ease-in-out  my-2 bg-[#0D1821]  hover:bg-green-500 text-white  col-span-2">
                     Login
                   </button>
                 </NavLink>

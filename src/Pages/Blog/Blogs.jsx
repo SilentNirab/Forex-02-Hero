@@ -1,15 +1,14 @@
 import Card from "../Card/Card";
 import data from "../../articals.json";
 import Container from "../../Components/Container/Container";
-import BlogDetails from "./BlogDetailsPage";
 import { Helmet } from "react-helmet";
 
 const Blogs = () => {
   const datas = data;
 
   return (
-    <div className="min-h-[80vh]">
-       <Helmet>
+    <div className="min-h-[80vh] pb-10 md:pb-20 lg:pb-24">
+      <Helmet>
         <title>Forex 02 Hero | Blog</title>
       </Helmet>
       <Container>
@@ -29,10 +28,6 @@ const Blogs = () => {
               <Card key={data.id} card={data}></Card>
             ))}
           </div>
-        </div>
-
-        <div>
-          <BlogDetails></BlogDetails>
         </div>
       </Container>
     </div>

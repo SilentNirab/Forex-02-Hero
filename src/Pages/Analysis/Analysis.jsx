@@ -5,7 +5,7 @@ import ButtonComponent from "./ButtonComponent";
 const Analysis = () => {
   return (
 
-    <div className="bg-gray-100 ">
+    <div className="min-h-[80vh] bg-gray-100 ">
           <Helmet>
     <title>Forex 02 Hero | Analysis</title>
   </Helmet>
