@@ -9,6 +9,7 @@ const AddPost = () => {
   const publicAxios = useAxios();
   const [content, setContent] = useState("");
   const [image, setImage] = useState(null); // State to store compressed image
+  const [title, setTitle] = useState(""); // State to store the title
 
   const handleEditorChange = (value) => {
     setContent(value);
@@ -54,6 +55,11 @@ const AddPost = () => {
         // Send data to the server
         const res = await publicAxios.post("/posts", post);
         if (res.data.insertedId) {
+          // Clear form fields after successful submission
+          setTitle("");
+          setContent("");
+          setImage(null);
+          // Show success message
           Swal.fire({
             position: "top-end",
             icon: "success",
@@ -86,6 +92,8 @@ const AddPost = () => {
                   name="title"
                   id="title"
                   required
+                  value={title}
+                  onChange={(e) => setTitle(e.target.value)}
                 />
               </div>
 

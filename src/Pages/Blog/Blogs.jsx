@@ -1,10 +1,22 @@
 import Card from "../Card/Card";
-import data from "../../articals.json";
 import Container from "../../Components/Container/Container";
+<<<<<<< HEAD
+=======
+// import BlogDetails from "./BlogDetailsPage";
+>>>>>>> 802b8c8b1eb81d2a5dcf29bb5af0e6a577b9392a
 import { Helmet } from "react-helmet";
+import useAxios from "../../hooks/useAxios";
+import { useQuery } from "@tanstack/react-query";
 
 const Blogs = () => {
-  const datas = data;
+  const publicAxios = useAxios();
+  const { data: posts = [] } = useQuery({
+    queryKey: ['posts'],
+    queryFn: async () => {
+      const res = await publicAxios.get('/posts');
+      return res.data;
+    }
+  });
 
   return (
     <div className="min-h-[80vh] pb-10 md:pb-20 lg:pb-24">
@@ -14,8 +26,13 @@ const Blogs = () => {
       <Container>
         <div>
           <div className="text-center">
+<<<<<<< HEAD
             <h2 className="text-3xl md:text-6xl inline border-b-2 border-green-600  font-semibold">
               Our Team
+=======
+            <h2 className="text-3xl md:text-5xl inline border-b-2 border-green-600  font-semibold">
+              Our Blog
+>>>>>>> 802b8c8b1eb81d2a5dcf29bb5af0e6a577b9392a
             </h2>
             <p className="md:max-w-[600px] mx-auto py-5">
               Lorem ipsum, dolor sit amet consectetur adipisicing elit.
@@ -24,11 +41,18 @@ const Blogs = () => {
             </p>
           </div>{" "}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 md:gap-x-8 gap-y-10 mt-20">
-            {datas.map((data) => (
+            {posts.map((data) => (
               <Card key={data.id} card={data}></Card>
             ))}
           </div>
         </div>
+<<<<<<< HEAD
+=======
+
+        <div>
+          {/* <BlogDetails></BlogDetails> */}
+        </div>
+>>>>>>> 802b8c8b1eb81d2a5dcf29bb5af0e6a577b9392a
       </Container>
     </div>
   );
