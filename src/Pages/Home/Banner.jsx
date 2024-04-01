@@ -1,4 +1,4 @@
-import { Link, NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 import Container from "../../Components/Container/Container";
 import banner from "../../assets/images/banner-original.webp";
 import { MdOutlinePlayCircleOutline } from "react-icons/md";
@@ -10,7 +10,7 @@ const Banner = () => {
         <Container>
           <div className="flex flex-col-reverse  justify-center w-full md:flex md:items-center md:space-y-9 md:flex-row md:justify-between">
             <div className="flex justify-center md:justify-start w-full  md:w-6/12  ">
-              <img src={banner} className="max-w-sm md:max-w-xl " alt="" />
+              <img src={banner} className="max-w-[250px] md:max-w-md lg:max-w-lg " alt="" />
             </div>
             <div className="text-center pt-4 md:pt-0 md:text-left w-full md:w-6/12">
               <div className="space-y-2 md:space-y-8">
@@ -23,11 +23,13 @@ const Banner = () => {
 
                 {/* button secton */}
                 <div className="flex items-center justify-center md:justify-normal space-x-3 md:space-x-7">
-                  <NavLink to={"/register"}>
+                <div>
+                  <Link to={"https://t.me/Forex_02_Hero"} target="blank">
                     <button className="transition ease-in-out my-5 text-md px-4 py-2 md:px-5 md:py-4 bg-green-500 border-2 border-green-500 md:border-0 text-white rounded-md font-normal hover:bg-green-600 duration-500">
-                      Register Now
+                      Join Our Telegram
                     </button>
-                  </NavLink>
+                  </Link>
+                </div>
 
                   {/* watch video button */}
                   <div className="">
@@ -45,13 +47,7 @@ const Banner = () => {
                   </div>
                 </div>
                 {/* telegram button */}
-                <div>
-                  <Link to={"https://t.me/Forex_02_Hero"} target="blank">
-                    <button className="transition ease-in-out text-md px-4 py-2 md:px-24 md:py-4 bg-green-500 border-2 border-green-500 md:border-0 text-white rounded-md font-normal hover:bg-green-600 duration-500">
-                      Join Our Telegram
-                    </button>
-                  </Link>
-                </div>
+               
               </div>
             </div>
           </div>

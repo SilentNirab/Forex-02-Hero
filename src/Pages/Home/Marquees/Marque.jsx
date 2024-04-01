@@ -4,7 +4,7 @@
 const Marque = ({ text }) => {
   return (
     <div>
-      <h3 className="text-3xl md:text-5xl mx-3">{text?.news_title} ||</h3>
+      <h3 className="text-2xl md:text-4xl mx-3">{text?.news_title} ||</h3>
     </div>
   );
 };
