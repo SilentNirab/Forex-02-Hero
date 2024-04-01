@@ -1,66 +1,120 @@
-import { Link } from "react-router-dom";
+/* eslint-disable react/no-unescaped-entities */
+import { Helmet } from "react-helmet";
 import Container from "../../Components/Container/Container";
+import ourMission from "../../assets/images/our-mission.webp";
+import ourStory from "../../assets/images/our-story.webp";
+import Team from "../Home/Team/Team";
 
 const AboutUs = () => {
   return (
-
-      <Container>
-        <div className=" min-h-[80vh] bg-white">
-          <div className="flex flex-col md:flex-row items-center justify-between space-y-10">
-            <div className=" min-h-[550px] md:h-screen hidden md:flex items-center px-20 md:w-2/4"></div>
-            <div></div>
-            <div className="md:w-2/4 px-10 lg:px-20 lg:pr-40">
-              <div className="border border-gray-200 rounded-lg p-10 space-y-6 mb-10 md:mb-0">
-                <h3 className="text-2xl font-bold text-center text-[#333]">
-                  Login
-                </h3>
-                <form
-                  className="w-full flex flex-col gap-2"
-                
-                >
-                  <label className="font-bold text-[#333]">Email</label>
-                  <input
-                    className="bg-green-100 focus-visible:border-green-700 text-black rounded-md p-4 F3F3F3 placeholder:#9D9C9C"
-         
-                    placeholder="Enter your email"
-                  
-                  />
-
-                  <div className=" flex justify-between">
-                    <label className="font-bold text-[#333]">Password</label>
+    <div className=" min-h-[80vh]">
+      {/* about section */}
+      <div className="bg-white">
+        <Container>
+          <div>
+            <Helmet>Forex 02 Hero | About Us</Helmet>
+            <div className="py-16">
+              <div className="container m-auto px-2 text-gray-600 md:px-12 xl:px-6">
+                <div className="space-y-6 md:space-y-0 md:flex md:gap-6 lg:items-center lg:gap-12">
+                  <div className="md:7/12 lg:w-6/12">
+                    <h2 className="text-4xl  md:text-7xl text-gray-900 font-semibold ">
+                      About Us
+                    </h2>
+                    <p className="mt:2 md:mt-6 md:text-2xl">
+                      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                      Dolorum, neque.
+                    </p>
                   </div>
-
-                  <div className=" form-control relative">
-                 
-                 
-                    { (
-                      <p className="text-[#F7A582]">Password is required</p>
-                    )}
-                    <span
-                      className="absolute top-5 right-4"
-                      
-                    >
-                      
-                    </span>
+                  <div className="md:5/12 lg:w-5/12">
+                    <img
+                      className="shadow-xl"
+                      src="https://tailus.io/sources/blocks/left-image/preview/images/startup.png"
+                      alt=""
+                    />
                   </div>
-                  <input
-                    className="bg-[#0D1821] transition ease-in-out text-xl font-bold py-2 my-2 hover:bg-green-500 text-white rounded-lg col-span-2"
-                    type="submit"
-                    value="Login"
-                  />
-                  <p className="text-center text-[#6C6B6B]">
-                    Please register at first. Go to{" "}
-                    <Link to={"/register"} className="text-green-500 font-bold">
-                      Registation
-                    </Link>
-                  </p>
-                </form>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      </Container>
-   
+        </Container>
+      </div>
+
+      {/* our story section */}
+      <div className="bg-gray-100">
+        <Container>
+          <div>
+            <Helmet>Forex 02 Hero | About Us</Helmet>
+            <div className="py-16">
+              <div className="container m-auto px-2 text-gray-600 md:px-12 xl:px-6">
+                <div className="space-y-6 md:space-y-0 md:flex md:gap-6 lg:items-center lg:gap-12">
+                  <div className=" shadow-2xl rounded-lg border-8 border-white">
+                    <img className="" src={ourMission} alt="" />
+                  </div>
+                  <div className="md:7/12 lg:w-6/12">
+                    <h2 className="text-3xl text-gray-900 font-bold ">
+                      Our Mission: Helping Millions of Pepoles Grow Better in
+                      Trading
+                    </h2>
+                    <p className="mt-2 md:mt-6 md:text-xl">
+                      We believe not just in growing bigger, but in growing
+                      better. And growing better means aligning the success of
+                      your own business with the success of your customers.
+                      Win-win!
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </Container>
+      </div>
+      <div className="bg-white">
+        <Container>
+          <div>
+            <Helmet>Forex 02 Hero | About Us</Helmet>
+            <div className="py-16">
+              <div className="container m-auto px-2 text-gray-600 md:px-12 xl:px-6">
+                <div className="space-y-6 md:space-y-0 md:flex md:gap-6 lg:items-center lg:gap-12">
+                  <div className="md:7/12 lg:w-6/12">
+                    <h2 className="text-4xl text-gray-900 font-bold ">
+                      Our Story
+                    </h2>
+                    <p className="mt-2 md:mt-6 md:text-xl">
+                      "Forex 02 Hero" is here to make the way easier for you. We
+                      are working as an organized team to create a successful
+                      trading community within 2024. With this community you can
+                      make yourself profitable by training up yourself and
+                      analyzing the market. In this journey, 'Manas Dhali' sir
+                      (14 year's experienced successful trader) will be with us
+                      as a mentor Our respected sir is leading from the front
+                      throughout this journey.
+                    </p>
+                    <p className="mt-2 md:mt-3 md:text-xl">
+                      So, you can be a part of this journey with us Through our
+                      "Forex 02 Hero" website you will be provided -- Dynamic
+                      courses on various market strategies and analysis. Here we
+                      provide a 'Treading Room' that the most surprising part
+                      for you where our respected mentor Manas Dhali sir will
+                      provide the regular updates of the market. So, you are
+                      firmly welcomed here to be a successful part of this path.
+                      So being a trader stay with us.
+                    </p>
+                  </div>
+                  <div className=" shadow-2xl rounded-lg border-8 border-white">
+                    <img className="" src={ourStory} alt="" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </Container>
+      </div>
+
+      {/* Team section */}
+      <Team></Team>
+
+      {/* Resourses section */}
+    </div>
   );
 };
 
