@@ -6,9 +6,9 @@ import { MdOutlinePlayCircleOutline } from "react-icons/md";
 const Banner = () => {
   return (
     <div>
-      <div className=" md:py-20   bg-gradient-to-r from-green-800 to-gray-900">
+      <div className=" md:pt-20   bg-gradient-to-r from-green-800 to-gray-900">
         <Container>
-          <div className="flex flex-col-reverse  md:relative justify-center w-full md:flex md:items-center md:space-y-9 md:flex-row md:justify-between">
+          <div className="flex flex-col-reverse  justify-center w-full md:flex md:items-center md:space-y-9 md:flex-row md:justify-between">
             <div className="flex justify-center md:justify-start w-full  md:w-6/12  ">
               <img src={banner} className="max-w-sm md:max-w-xl " alt="" />
             </div>
