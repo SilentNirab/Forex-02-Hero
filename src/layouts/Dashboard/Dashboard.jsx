@@ -45,7 +45,7 @@ const Dashboard = () => {
                                     </li>
                                     <li>
                                         <NavLink to="/dashboard/allnews">
-                                        all News</NavLink>
+                                        All News</NavLink>
                                     </li>
                                     {/* shared nav links */}
                                     <div className="divider"></div>
