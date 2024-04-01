@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet";
 import Container from "../../Components/Container/Container";
 import Cards from "../Card/Cards";
 import Banner from "./Banner";
@@ -10,17 +11,19 @@ import Team from "./Team/Team";
 const Home = () => {
   return (
     <div className="min-h-[80vh]">
+      <Helmet>
+        <title>Forex 02 Hero | Home</title>
+      </Helmet>
       <Banner></Banner>
       <Marquees></Marquees>
       <Container>
-      
         <Cards></Cards>
-
-        </Container>
-        <Team></Team>
-        <CallToAction></CallToAction>
-        <Container><Broker></Broker></Container>
-      
+      </Container>
+      <Team></Team>
+      <CallToAction></CallToAction>
+      <Container>
+        <Broker></Broker>
+      </Container>
     </div>
   );
 };
