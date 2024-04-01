@@ -44,6 +44,7 @@ const Banner = () => {
                     </Link>
                   </div>
                 </div>
+                {/* telegram button */}
               </div>
             </div>
           </div>

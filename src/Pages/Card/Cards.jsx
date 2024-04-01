@@ -3,16 +3,15 @@ import Card from "./Card";
 import useAxios from "../../hooks/useAxios";
 import { useQuery } from "@tanstack/react-query";
 const Cards = () => {
-
   const publicAxios = useAxios();
   const { data: posts = [] } = useQuery({
-    queryKey: ['posts'],
+    queryKey: ["posts"],
     queryFn: async () => {
-      const res = await publicAxios.get('/posts');
+      const res = await publicAxios.get("/posts");
       return res.data;
-    }
+    },
   });
-    // Slice the posts array to get only the first 6 posts
+  // Slice the posts array to get only the first 6 posts
   const limitedPosts = posts.slice(0, 6);
   return (
     <>
