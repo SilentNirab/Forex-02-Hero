@@ -1,9 +1,14 @@
+import { Helmet } from "react-helmet";
 import Container from "../../Components/Container/Container";
 import ButtonComponent from "./ButtonComponent";
 
 const Analysis = () => {
   return (
-    <div className="bg-gray-100 ">
+
+    <div className="min-h-[80vh] bg-gray-100 ">
+          <Helmet>
+    <title>Forex 02 Hero | Analysis</title>
+  </Helmet>
       <Container>
         <iframe
           className="w-full h-full my-10 rounded-lg md:min-h-[700px]"
