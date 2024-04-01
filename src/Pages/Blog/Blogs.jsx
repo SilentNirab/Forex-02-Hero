@@ -16,8 +16,8 @@ const Blogs = () => {
   });
 
   return (
-    <div className="min-h-[80vh]">
-       <Helmet>
+    <div className="min-h-[80vh] pb-10 md:pb-20 lg:pb-24">
+      <Helmet>
         <title>Forex 02 Hero | Blog</title>
       </Helmet>
       <Container>

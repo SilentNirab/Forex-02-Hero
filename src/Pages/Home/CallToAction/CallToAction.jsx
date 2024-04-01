@@ -165,7 +165,7 @@ const CallToAction = () => {
             </div>
           </div>
 
-          <div className="w-full   bg-green-400 shadow-xl space-y-4 shadow-indigo-200 py-10 px-20 flex flex-col md:flex-row justify-between items-center">
+          <div className="w-full text-center  bg-green-400 shadow-xl space-y-4 shadow-indigo-200 py-10 px-4 md:px-20 flex flex-col md:flex-row justify-between items-center">
             <p className=" text-white">
               {" "}
               <span className="text-2xl md:text-4xl font-medium">
