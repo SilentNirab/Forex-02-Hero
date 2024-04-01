@@ -16,6 +16,7 @@ import ClientRoute from "./ClientRoute";
 import PrivateRoute from "./PriveteRoute";
 import BrakingNews from "../Pages/Dashboard/BreakingNews/BreakingNews";
 import AllNews from "../Pages/Dashboard/AllNews/AllNews";
+import Analysis from "../Pages/Analysis/Analysis";
 
 export const router = createBrowserRouter([
   {
@@ -38,7 +39,7 @@ export const router = createBrowserRouter([
 
       {
         path: "blogs",
-        element: <PrivateRoute><ClientRoute><Blogs></Blogs></ClientRoute></PrivateRoute>,
+        element: <Blogs></Blogs>,
       },
       {
         path: "aboutUs",
@@ -47,34 +48,62 @@ export const router = createBrowserRouter([
     ],
   },
   {
+    path: "analysis",
+    element: <Analysis></Analysis>,
+  },
+  {
     path: "/dashboard",
     element: <Dashboard></Dashboard>,
     errorElement: <Errorpage></Errorpage>,
     children: [
       {
         path: "/dashboard/",
-        element: <AdminRoute><AdminProfile></AdminProfile></AdminRoute>
+        element: (
+          <AdminRoute>
+            <AdminProfile></AdminProfile>
+          </AdminRoute>
+        ),
       },
       {
-        path: '/dashboard/allusers',
-        element:<AdminRoute><AllUsers></AllUsers></AdminRoute>
+        path: "/dashboard/allusers",
+        element: (
+          <AdminRoute>
+            <AllUsers></AllUsers>
+          </AdminRoute>
+        ),
       },
       {
         path: "/dashboard/addpost",
-        element: <AdminRoute><AddPost></AddPost></AdminRoute>
+        element: (
+          <AdminRoute>
+            <AddPost></AddPost>
+          </AdminRoute>
+        ),
       },
       {
         path: "/dashboard/allposts",
-        element: <AdminRoute><AllPots></AllPots></AdminRoute>
+        element: (
+          <AdminRoute>
+            <AllPots></AllPots>
+          </AdminRoute>
+        ),
       },
       {
         path: "/dashboard/addnews",
-        element: <AdminRoute><BrakingNews></BrakingNews></AdminRoute>
+        element: (
+          <AdminRoute>
+            <BrakingNews></BrakingNews>
+          </AdminRoute>
+        ),
       },
       {
         path: "/dashboard/allnews",
-        element: <AdminRoute><AllNews></AllNews></AdminRoute>
-      }
-  ],
+        element: (
+          <AdminRoute>
+            <AllNews></AllNews>
+          </AdminRoute>
+        ),
+      },
+    ],
   },
 ]);

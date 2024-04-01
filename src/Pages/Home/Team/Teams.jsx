@@ -37,7 +37,7 @@ const Teams = () => {
         spaceBetween={10}
         loop={true}
         autoplay={{
-          delay: 2500,
+          delay: 4500,
           disableOnInteraction: false,
         }}
         breakpoints={{
@@ -62,23 +62,25 @@ const Teams = () => {
       >
         <SwiperSlide>
           {" "}
-          <div className="w-full bg-white rounded-lg p-8 flex flex-col justify-center items-center">
+          <div className="w-full bg-white rounded-lg p-8  h-[600px] flex flex-col justify-between items-center">
             <div className="mb-8">
               <img
                 className="object-center object-cover rounded-full h-36 w-36"
-                src={ajijul}
+                src={rahima}
                 alt=""
               />
             </div>
             <div className="text-center">
               <p className="text-xl text-gray-700 font-bold mb-2">
-                Engineer Azizul Haque
+                Rahima Sultana
               </p>
               <p className="text-base  text-gray-400 font-normal">
-                <p>Hello,</p> Assalamu Allaikum I'm Engineer Azizul Haque I am
-                working as Forex 02 hero virtual assistant so if anyone has any
-                problem please let me know or call me directly.
-                <p>Thank you</p>
+                <p>Hello,</p> I am Rahima Sultana and working as a virtual
+                assistant for Forex 02 Hero. I&apos;m thrilled to extend a warm
+                invitation to you today to join our team, where we have an
+                abundance of opportunities for achieving better and smarter
+                passive income in the forex market. We are working for a
+                successful trading community.
               </p>
             </div>
 
@@ -90,9 +92,10 @@ const Teams = () => {
             </div>
           </div>
         </SwiperSlide>
+
         <SwiperSlide>
           {" "}
-          <div className="w-full bg-white rounded-lg p-8 flex flex-col justify-center items-center">
+          <div className="w-full bg-white rounded-lg p-8  h-[600px] flex flex-col justify-between items-center">
             <div className="mb-8">
               <img
                 className="object-center object-cover rounded-full h-36 w-36"
@@ -125,7 +128,37 @@ const Teams = () => {
         </SwiperSlide>
         <SwiperSlide>
           {" "}
-          <div className="w-full bg-white rounded-lg p-8 flex flex-col justify-center items-center">
+          <div className="w-full bg-white rounded-lg p-8  h-[600px] flex flex-col justify-between items-center">
+            <div className="mb-8">
+              <img
+                className="object-center object-cover rounded-full h-36 w-36"
+                src={ajijul}
+                alt=""
+              />
+            </div>
+            <div className="text-center">
+              <p className="text-xl text-gray-700 font-bold mb-2">
+                Engineer Azizul Haque
+              </p>
+              <p className="text-base  text-gray-400 font-normal">
+                <p>Hello,</p> Assalamu Allaikum I&apos;m Engineer Azizul Haque I am
+                working as Forex 02 hero virtual assistant so if anyone has any
+                problem please let me know or call me directly.
+                <p>Thank you</p>
+              </p>
+            </div>
+
+            <div className="flex items-center mt-6 space-x-5">
+              <FaFacebookF />
+              <FaTwitter />
+              <FaTelegram />
+              <FaInstagram />
+            </div>
+          </div>
+        </SwiperSlide>
+        <SwiperSlide>
+          {" "}
+          <div className="w-full bg-white rounded-lg p-8  h-[600px] flex flex-col justify-between items-center">
             <div className="mb-8">
               <img
                 className="object-center object-cover rounded-full h-36 w-36"
@@ -139,7 +172,7 @@ const Teams = () => {
               </p>
               <p className="text-base  text-gray-400 font-normal">
                 <p>Hello,</p> I am Md Mirazul islam and working as a virtual
-                assistant for Forex 02 Hero. I'm thrilled to extend a warm
+                assistant for Forex 02 Hero. I&apos;m thrilled to extend a warm
                 invitation to you today to join our team, where we have an
                 abundance of opportunities for achieving better and smarter
                 passive income in the forex market. We are working for a
@@ -157,41 +190,10 @@ const Teams = () => {
             </div>
           </div>
         </SwiperSlide>
-        <SwiperSlide>
-          {" "}
-          <div className="w-full bg-white rounded-lg p-8 flex flex-col justify-center items-center">
-            <div className="mb-8">
-              <img
-                className="object-center object-cover rounded-full h-36 w-36"
-                src={rahima}
-                alt=""
-              />
-            </div>
-            <div className="text-center">
-              <p className="text-xl text-gray-700 font-bold mb-2">
-                Rahima Sultana
-              </p>
-              <p className="text-base  text-gray-400 font-normal">
-                <p>Hello,</p> I am Rahima Sultana and working as a virtual
-                assistant for Forex 02 Hero. I'm thrilled to extend a warm
-                invitation to you today to join our team, where we have an
-                abundance of opportunities for achieving better and smarter
-                passive income in the forex market. We are working for a
-                successful trading community.
-              </p>
-            </div>
 
-            <div className="flex items-center mt-6 space-x-5">
-              <FaFacebookF />
-              <FaTwitter />
-              <FaTelegram />
-              <FaInstagram />
-            </div>
-          </div>
-        </SwiperSlide>
         <SwiperSlide>
           {" "}
-          <div className="w-full bg-white rounded-lg p-8 flex flex-col justify-center items-center">
+          <div className="w-full bg-white rounded-lg p-8  h-[600px] flex flex-col justify-between items-center">
             <div className="mb-8">
               <img
                 className="object-center object-cover rounded-full h-36 w-36"
@@ -204,7 +206,7 @@ const Teams = () => {
                 Md Himel Mia{" "}
               </p>
               <p className="text-base  text-gray-400 font-normal">
-                <p>Hello,</p> I'm Md Himel Mia. We want to make a successful
+                <p>Hello,</p> I&apos;m Md Himel Mia. We want to make a successful
                 trading community in 2024. We are ready for your support. We
                 provide you market analyses, Meta5 Terminal service and others
                 trade related issue. Stay with us and Be a Trader✌
@@ -222,7 +224,7 @@ const Teams = () => {
         </SwiperSlide>
         <SwiperSlide>
           {" "}
-          <div className="w-full bg-white rounded-lg p-8 flex flex-col justify-center items-center">
+          <div className="w-full bg-white rounded-lg p-8  h-[600px] flex flex-col justify-between items-center">
             <div className="mb-8">
               <img
                 className="object-center object-cover rounded-full h-36 w-36"
@@ -233,7 +235,7 @@ const Teams = () => {
             <div className="text-center">
               <p className="text-xl text-gray-700 font-bold mb-2">Tanvir</p>
               <p className="text-base  text-gray-400 font-normal">
-                <p>Hello,</p> I'm Tanvir and working as a virtual assistant of
+                <p>Hello,</p> I&apos;m Tanvir and working as a virtual assistant of
                 "Forex02Hero" We are working for a successful trading community
                 and you can became a part of us. So for any quarry you can
                 contract with us.
@@ -251,7 +253,7 @@ const Teams = () => {
         </SwiperSlide>
         <SwiperSlide>
           {" "}
-          <div className="w-full bg-white rounded-lg p-8 flex flex-col justify-center items-center">
+          <div className="w-full bg-white rounded-lg p-8  h-[600px] flex flex-col justify-between items-center">
             <div className="mb-8">
               <img
                 className="object-center object-cover rounded-full h-36 w-36"
@@ -282,7 +284,7 @@ const Teams = () => {
         </SwiperSlide>
         <SwiperSlide>
           {" "}
-          <div className="w-full bg-white rounded-lg p-8 flex flex-col justify-center items-center">
+          <div className="w-full bg-white rounded-lg p-8  h-[600px] flex flex-col justify-between items-center">
             <div className="mb-8">
               <img
                 className="object-center object-cover rounded-full h-36 w-36"
@@ -312,7 +314,7 @@ const Teams = () => {
         </SwiperSlide>
         <SwiperSlide>
           {" "}
-          <div className="w-full bg-white rounded-lg p-8 flex flex-col justify-center items-center">
+          <div className="w-full bg-white rounded-lg p-8  h-[600px] flex flex-col justify-between items-center">
             <div className="mb-8">
               <img
                 className="object-center object-cover rounded-full h-36 w-36"
@@ -345,7 +347,7 @@ const Teams = () => {
         </SwiperSlide>
         <SwiperSlide>
           {" "}
-          <div className="w-full bg-white rounded-lg p-8 flex flex-col justify-center items-center">
+          <div className="w-full bg-white rounded-lg p-8  h-[600px] flex flex-col justify-between items-center">
             <div className="mb-8">
               <img
                 className="object-center object-cover rounded-full h-36 w-36"
@@ -378,7 +380,7 @@ const Teams = () => {
         </SwiperSlide>
         <SwiperSlide>
           {" "}
-          <div className="w-full bg-white rounded-lg p-8 flex flex-col justify-center items-center">
+          <div className="w-full bg-white rounded-lg p-8  h-[600px] flex flex-col justify-between items-center">
             <div className="mb-8">
               <img
                 className="object-center object-cover rounded-full h-36 w-36"
@@ -411,7 +413,7 @@ const Teams = () => {
         </SwiperSlide>
         <SwiperSlide>
           {" "}
-          <div className="w-full bg-white rounded-lg p-8 flex flex-col justify-center items-center">
+          <div className="w-full bg-white rounded-lg p-8  h-[600px] flex flex-col justify-between items-center">
             <div className="mb-8">
               <img
                 className="object-center object-cover rounded-full h-36 w-36"
@@ -443,7 +445,7 @@ const Teams = () => {
         </SwiperSlide>
         <SwiperSlide>
           {" "}
-          <div className="w-full bg-white rounded-lg p-8 flex flex-col justify-center items-center">
+          <div className="w-full bg-white rounded-lg p-8  h-[600px] flex flex-col justify-between items-center">
             <div className="mb-8">
               <img
                 className="object-center object-cover rounded-full h-36 w-36"

@@ -1,11 +1,10 @@
 import axios from "axios";
 
 const axiosSecure = axios.create({
-    baseURL: ' http://localhost:5000',
-    
-  });
+  baseURL: " https://package-rust.vercel.app/",
+});
 const useAxios = () => {
-    return axiosSecure;
+  return axiosSecure;
 };
 
 export default useAxios;

@@ -1,11 +1,11 @@
 // Login.js
-import { useRef, useState } from 'react';
-import { Helmet } from 'react-helmet';
-import { useForm } from "react-hook-form"
-import { FaRegEye, FaRegEyeSlash } from 'react-icons/fa';
-import loginBg from '../../assets/images/login.webp'
-import { Link, useNavigate } from 'react-router-dom';
-import useAuth from '../../hooks/useAuth';
+import { useRef, useState } from "react";
+import { Helmet } from "react-helmet";
+import { useForm } from "react-hook-form";
+import { FaRegEye, FaRegEyeSlash } from "react-icons/fa";
+import loginBg from "../../assets/images/login.webp";
+import { Link, useNavigate } from "react-router-dom";
+import useAuth from "../../hooks/useAuth";
 
 const Login = () => {
   const { signIn } = useAuth();
@@ -41,8 +41,7 @@ const Login = () => {
   //     });
   // };
 
-    
-     return (
+  return (
     <div className="min-h-[80vh] bg-white">
       <Helmet>
         <title>Forex 02 Hero | Login</title>
@@ -51,15 +50,16 @@ const Login = () => {
         <div className="min-h-[550px] md:h-screen hidden md:flex items-center px-20 md:w-2/4">
           <img className="w-full" src={loginBg} alt="Login" />
         </div>
-        <div>
-        </div>
+        <div></div>
         <div className="md:w-2/4 px-10 lg:px-20 lg:pr-40">
           <div className="border border-gray-200 rounded-lg p-10 space-y-6 mb-10 md:mb-0">
             <h3 className="text-2xl font-bold text-center text-[#333]">
               Login
             </h3>
-            {errorMessage && <p className="text-red-500">{errorMessage}</p>}
-            <form className="w-full flex flex-col gap-2" onSubmit={handleSubmit(onSubmit)}>
+            <form
+              className="w-full flex flex-col gap-2"
+              onSubmit={handleSubmit(onSubmit)}
+            >
               <label className="font-bold text-[#333]">Email</label>
               <input
                 className="bg-green-100 focus-visible:border-green-700 text-black rounded-md p-4 F3F3F3 placeholder:#9D9C9C"
@@ -89,14 +89,14 @@ const Login = () => {
                 {errors.password?.type === "required" && (
                   <p className="text-[#F7A582]">Password is required</p>
                 )}
-                <span className="absolute top-5 right-4" onClick={() => setShowPassword(!showPassword)}>
-                  {showPassword ? (
-                    <FaRegEyeSlash />
-                  ) : (
-                    <FaRegEye />
-                  )}
+                {errorMessage && <p className="text-red-500">{errorMessage}</p>}
+
+                <span
+                  className="absolute top-5 right-4"
+                  onClick={() => setShowPassword(!showPassword)}
+                >
+                  {showPassword ? <FaRegEyeSlash /> : <FaRegEye />}
                 </span>
-                
               </div>
               <input
                 className="bg-[#0D1821] transition ease-in-out text-xl font-bold py-2 my-2 hover:bg-green-500 text-white rounded-lg col-span-2"

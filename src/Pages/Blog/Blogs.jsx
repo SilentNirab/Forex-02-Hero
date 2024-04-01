@@ -2,12 +2,16 @@ import Card from "../Card/Card";
 import data from "../../articals.json";
 import Container from "../../Components/Container/Container";
 import BlogDetails from "../BlogDetails/BlogDetails";
+import { Helmet } from "react-helmet";
 
 const Blogs = () => {
   const datas = data;
 
   return (
     <div className="min-h-[80vh]">
+       <Helmet>
+        <title>Forex 02 Hero | Blog</title>
+      </Helmet>
       <Container>
         <div>
           <div className="text-center">
