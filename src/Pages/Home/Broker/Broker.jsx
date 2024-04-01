@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 import logo from "../../../assets/images/dbinvesing.png";
 
 const Broker = () => {
@@ -17,16 +17,21 @@ const Broker = () => {
             />
           </div>
           <p className="text-sm px-4 md:px-8 md:text-xl">
-            Get a <span className="font-bold">30% trade credit</span> and <span className="font-bold">free VIP access</span> when you join dbInvesing using my link and trade a minimum of 1 lot!
+            Get a <span className="font-bold">30% trade credit</span> and{" "}
+            <span className="font-bold">free VIP access</span> when you join
+            dbInvesing using my link and trade a minimum of 1 lot!
           </p>
         </div>
-     
+
         <div className="text-center ">
-          <NavLink to={"/register"}>
+          <Link
+            to={"https://my.dbinvesting.com/register/?lid=392&pid=69745"}
+            target="blank"
+          >
             <button className="transition ease-in-out px-2 py-1 md:px-4 md:py-2 bg-green-500 text-white rounded-md font-medium hover:bg-green-600 duration-500">
-              Join Our Forex02Hero
+              Join Our Recommeded Broker
             </button>
-          </NavLink>
+          </Link>
         </div>
       </div>
     </div>

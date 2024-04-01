@@ -40,7 +40,7 @@ const Navbar = () => {
           BLOGS
         </NavLink>
       </li>
-      <li className="font-bold text-lg">
+      <li className="font-bold uppercase text-lg">
         <NavLink
           to={"/analysis"}
           className={({ isActive, isPending }) =>
@@ -89,9 +89,9 @@ const Navbar = () => {
     </>
   );
   return (
-    <div className="border-b border-gray">
+    <div className="sticky top-0 z-10  bg-gray-100 border-b border-gray">
       <Container>
-        <div className="navbar bg-base-100 ">
+        <div className="navbar ">
           <div className="navbar-start">
             <div className="dropdown">
               <label tabIndex={0} className="btn btn-ghost lg:hidden">

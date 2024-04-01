@@ -28,8 +28,10 @@ const CallToAction = () => {
                 Most Experienced Team
               </p>
               <p className="mt-2 text-sm text-slate-500">
-                Team BrainEdge education is a bunch of highly focused, energetic
-                set of people.
+                The main difficulties of forex market is there are thousands of
+                strategies her and we confused what should I follow. We an
+                experienced team are working for that. We are going to provide
+                something different
               </p>
             </div>
 
@@ -51,10 +53,12 @@ const CallToAction = () => {
                 </svg>
               </span>
               <p className="text-xl font-medium text-slate-700 mt-3">
-                Best Test preparation
+                Mentorship{" "}
               </p>
               <p className="mt-2 text-sm text-slate-500">
-                Know where you stand and what next to do to succeed .
+                Trading is a journey. To be a professional trader a Mentorship
+                is very much important. Our mentor Manas Dhali sir 14 years
+                experienced Trader will quide us throughout the journey{" "}
               </p>
             </div>
 
@@ -76,11 +80,11 @@ const CallToAction = () => {
                 </svg>
               </span>
               <p className="text-xl font-medium text-slate-700 mt-3">
-                Admission process Guidance
+                Proper Guidelines{" "}
               </p>
               <p className="mt-2 text-sm text-slate-500">
-                Professional Advice for higher education abroad and select the
-                top institutions worldwide.
+                Sometimes you are the problem.So Try to find out your obstacles
+                first and solve it. We are here to guide you
               </p>
             </div>
 
@@ -165,7 +169,7 @@ const CallToAction = () => {
             <p className=" text-white">
               {" "}
               <span className="text-2xl md:text-4xl font-medium">
-                Still Confused 
+                Still Confused
               </span>{" "}
               <br />{" "}
               <span className="text-md md:text-lg">

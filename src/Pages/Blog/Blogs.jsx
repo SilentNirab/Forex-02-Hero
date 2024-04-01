@@ -1,7 +1,7 @@
 import Card from "../Card/Card";
 import data from "../../articals.json";
 import Container from "../../Components/Container/Container";
-import BlogDetails from "../BlogDetails/BlogDetails";
+import BlogDetails from "./BlogDetailsPage";
 import { Helmet } from "react-helmet";
 
 const Blogs = () => {

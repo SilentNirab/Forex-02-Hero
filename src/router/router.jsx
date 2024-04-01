@@ -17,6 +17,8 @@ import PrivateRoute from "./PriveteRoute";
 import BrakingNews from "../Pages/Dashboard/BreakingNews/BreakingNews";
 import AllNews from "../Pages/Dashboard/AllNews/AllNews";
 import Analysis from "../Pages/Analysis/Analysis";
+import AnalysisBlogPage from "../Pages/Analysis/AnalysisBlogPage";
+import BlogDetailsPage from "../Pages/Blog/BlogDetailsPage";
 
 export const router = createBrowserRouter([
   {
@@ -45,12 +47,21 @@ export const router = createBrowserRouter([
         path: "aboutUs",
         element: <AboutUs></AboutUs>,
       },
+      {
+        path: "analysis",
+        element: <Analysis></Analysis>,
+      },
+      {
+        path: "analysisDetails",
+        element: <AnalysisBlogPage></AnalysisBlogPage>,
+      },
+      {
+        path: "BlogDetailsPage",
+        element: <BlogDetailsPage></BlogDetailsPage>,
+      },
     ],
   },
-  {
-    path: "analysis",
-    element: <Analysis></Analysis>,
-  },
+
   {
     path: "/dashboard",
     element: <Dashboard></Dashboard>,
