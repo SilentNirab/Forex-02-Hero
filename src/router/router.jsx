@@ -126,6 +126,14 @@ export const router = createBrowserRouter([
           </AdminRoute>
         ),
       },
+      {
+        path: "/dashboard/allnews",
+        element: (
+          <AdminRoute>
+            <AllNews></AllNews>
+          </AdminRoute>
+        ),
+      },
     ],
   },
 ]);

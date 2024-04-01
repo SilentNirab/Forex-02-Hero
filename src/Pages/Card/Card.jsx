@@ -20,7 +20,7 @@ const Card = ({ card }) => {
 
   const shortenedContent = getFirst20Words(post_content);
   return (
-    <Link to={`/blogs/:${_id}`}>
+    <Link to={`/blogs/${_id}`}>
 
       <div className="card card-compact bg-base-100 shadow-xl hover:cursor-pointer">
         <figure>

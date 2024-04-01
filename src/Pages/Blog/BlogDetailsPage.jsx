@@ -1,10 +1,27 @@
 import { useState } from "react";
 import Container from "../../Components/Container/Container";
+import useAxios from "../../hooks/useAxios";
+import { useQuery } from "@tanstack/react-query";
+import { useParams } from "react-router-dom";
 
 const BlogDetailsPage = () => {
   const [comments, setComments] = useState([]);
   const [newComment, setNewComment] = useState("");
   const [rating, setRating] = useState(0);
+  const { id } = useParams();
+  
+  console.log("Post ID:", id);
+
+  const publicAxios = useAxios();
+  const { data: post = [] } = useQuery({
+    queryKey: ['post'],
+    queryFn: async () => {
+      const res = await publicAxios.get(`/posts/${id}`);
+      return res.data;
+    }
+  });
+
+  console.log("Post data:", post);
 
   const handleCommentSubmit = (e) => {
     e.preventDefault();
@@ -19,13 +36,24 @@ const BlogDetailsPage = () => {
     }
   };
 
+  const stripHtmlTagsAndKeepStyle = (html) => {
+    const div = document.createElement("div");
+    div.innerHTML = html;
+    const children = div.childNodes;
+    let result = '';
+    for (let i = 0; i < children.length; i++) {
+      result += children[i].outerHTML || children[i].nodeValue || '';
+    }
+    return result;
+  }
+
   return (
     <div>
       <Container>
         <div className="mx-auto py-10">
           {/* Image Banner */}
           <img
-            src="https://miro.medium.com/v2/resize:fit:1200/1*zgBD_HvWK0j58Sqh99_yUA.jpeg"
+            src={post?.image}
             alt="Banner"
             className="max-h-[500px] rounded-lg w-full"
           />
@@ -34,24 +62,12 @@ const BlogDetailsPage = () => {
           <div className="mt-8">
             {/* Heading */}
             <h1 className="text-2xl md:text-4xl font-bold">
-              Title of the Blog Post
+              {post?.post_title}
             </h1>
 
             {/* Blog Paragraph */}
             <p className="text-sm md:text-xl mt-4">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat
-              ut esse nesciunt ab rerum, laboriosam eligendi, inventore quasi
-              consequatur, adipisci provident aliquam debitis quia eveniet eos
-              aliquid dolorum aspernatur? Quis non error omnis velit recusandae
-              aliquam ad aperiam corporis deserunt incidunt necessitatibus
-              consequatur porro, reprehenderit consectetur? Architecto,
-              dignissimos nobis aspernatur quia fugiat esse laborum dolorem
-              natus! Dignissimos esse non alias mollitia quam ipsum veritatis
-              reprehenderit expedita voluptates? Incidunt quae vero
-              reprehenderit saepe sapiente consectetur. Eos, nulla? Repellendus
-              maiores dolore laborum? Dolorum assumenda eveniet atque esse
-              dolore minus et recusandae voluptatem, placeat tenetur magni.
-              Doloremque consequatur sapiente sed obcaecati voluptates autem?
+            <p dangerouslySetInnerHTML={{ __html: stripHtmlTagsAndKeepStyle(post?.post_content) }} ></p>
             </p>
 
             {/* Comments Section */}
