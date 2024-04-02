@@ -19,6 +19,8 @@ import AllNews from "../Pages/Dashboard/AllNews/AllNews";
 import Analysis from "../Pages/Analysis/Analysis";
 import AnalysisBlogPage from "../Pages/Analysis/AnalysisBlogPage";
 import BlogDetailsPage from "../Pages/Blog/BlogDetailsPage";
+import AnalysisPost from "../Pages/Dashboard/AnalysisPost/AnalysisPost";
+import Allnalysis from "../Pages/Dashboard/All Analysis/Allanalysis";
 
 export const router = createBrowserRouter([
   {
@@ -53,10 +55,11 @@ export const router = createBrowserRouter([
       },
       {
         path: "analysis",
-        element: <Analysis></Analysis>,
+        element: <PrivateRoute><ClientRoute><Analysis></Analysis>,</ClientRoute></PrivateRoute>,
+        loader: () => fetch('/category.json')
       },
       {
-        path: "analysisDetails",
+        path: "analysis/:category",
         element: <AnalysisBlogPage></AnalysisBlogPage>,
       },
       {
@@ -124,6 +127,22 @@ export const router = createBrowserRouter([
         element: (
           <AdminRoute>
             <AllNews></AllNews>
+          </AdminRoute>
+        ),
+      },
+      {
+        path: "/dashboard/analysis",
+        element: (
+          <AdminRoute>
+            <AnalysisPost></AnalysisPost>
+          </AdminRoute>
+        ),
+      },
+      {
+        path: "/dashboard/allanalysis",
+        element: (
+          <AdminRoute>
+            <Allnalysis></Allnalysis>
           </AdminRoute>
         ),
       },
