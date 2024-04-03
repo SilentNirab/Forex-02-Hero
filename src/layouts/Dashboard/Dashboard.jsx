@@ -32,6 +32,14 @@ const Dashboard = () => {
                                             Users</NavLink>
                                     </li>
                                     <li>
+                                        <NavLink to="/dashboard/analysis">
+                                            Analysis Post</NavLink>
+                                    </li>
+                                    <li>
+                                        <NavLink to="/dashboard/allanalysis">
+                                            All Analysis</NavLink>
+                                    </li>
+                                    <li>
                                         <NavLink to="/dashboard/addpost">
                                             Add Post</NavLink>
                                     </li>
@@ -56,13 +64,9 @@ const Dashboard = () => {
                                 </>
                                 :
                                 <>
-
                                 </>
-
                         }
-
                     </ul>
-
                 </div>
             </div>
         </div>

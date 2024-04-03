@@ -22,7 +22,7 @@ const Login = () => {
   const onSubmit = (data) => {
     signIn(data.email, data.password)
       .then(() => {
-        navigate("/");
+        navigate("/analysis");
       })
       .catch((error) => {
         console.error(error);
