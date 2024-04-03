@@ -1,0 +1,41 @@
+[{
+        "id": 1,
+        "category": "AUDUSD"
+    },
+    {
+        "id": 2,
+        "category": "EURUSD"
+    },
+    {
+        "id": 3,
+        "category": "USDCHF"
+    },
+    {
+        "id": 4,
+        "category": "USDCAD"
+    },
+    {
+        "id": 5,
+        "category": "USDJYP"
+    },
+    {
+        "id": 6,
+        "category": "XAUUSD"
+    },
+    {
+        "id": 7,
+        "category": "EURJYP"
+    },
+    {
+        "id": 8,
+        "category": "GBPJYP"
+    },
+    {
+        "id": 9,
+        "category": "GBPAUD"
+    },
+    {
+        "id" : 10,
+        "category": "GBPUSD"
+      }
+]

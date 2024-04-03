@@ -1,14 +1,17 @@
 import { Helmet } from "react-helmet";
 import Container from "../../Components/Container/Container";
 import ButtonComponent from "./ButtonComponent";
+import { useLoaderData } from "react-router-dom";
 
 const Analysis = () => {
+  const category = useLoaderData();
+  console.log(category);
   return (
 
     <div className="min-h-[80vh] bg-gray-100 ">
-          <Helmet>
-    <title>Forex 02 Hero | Analysis</title>
-  </Helmet>
+      <Helmet>
+        <title>Forex 02 Hero | Analysis</title>
+      </Helmet>
       <Container>
         <iframe
           className="w-full h-full my-10 rounded-lg md:min-h-[700px]"
@@ -19,8 +22,10 @@ const Analysis = () => {
           allowfullscreen
         ></iframe>
 
-        <div>
-          <ButtonComponent></ButtonComponent>
+        <div className="grid grid-cols-2 gap-4 py-5">
+          {
+            category.map(categorys => <ButtonComponent key={categorys.id} categorys={categorys}></ButtonComponent>)
+          }
         </div>
       </Container>
     </div>
