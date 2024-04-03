@@ -13,7 +13,7 @@ const Navbar = () => {
   };
   const NavNavLinks = (
     <>
-      <li className="font-bold text-lg">
+      <li className=" text-lg">
         <NavLink
           to={"/"}
           className={({ isActive, isPending }) =>
@@ -27,7 +27,7 @@ const Navbar = () => {
           HOME
         </NavLink>
       </li>
-      <li className="font-bold text-lg">
+      <li className=" text-lg">
         <NavLink
           to={"/blogs"}
           className={({ isActive, isPending }) =>
@@ -41,7 +41,7 @@ const Navbar = () => {
           BLOGS
         </NavLink>
       </li>
-      <li className="font-bold uppercase text-lg">
+      <li className=" uppercase text-lg">
         <NavLink
           to={"/analysis"}
           className={({ isActive, isPending }) =>
@@ -55,7 +55,7 @@ const Navbar = () => {
           Analysis
         </NavLink>
       </li>
-      <li className="font-bold text-lg">
+      <li className=" text-lg">
         <NavLink
           to={"/aboutUs"}
           className={({ isActive, isPending }) =>
@@ -71,7 +71,7 @@ const Navbar = () => {
       </li>
 
       {isAdmin ? (
-        <li className="font-bold text-lg">
+        <li className=" text-lg">
           <NavLink
             to={"/dashboard"}
             className={({ isActive, isPending }) =>
@@ -114,20 +114,20 @@ const Navbar = () => {
               </label>
               <ul
                 tabIndex={0}
-                className=" menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-gray-100 rounded-box w-52"
+                className=" menu-sm dropdown-content py-8 z-[1] text-center shadow bg-gray-100 rounded-box w-52"
               >
                 {NavNavLinks}
-                <li className=" ">
+                <li className=" mt-4 ">
                   {user ? (
                     <button
                       onClick={handelDelete}
-                      className="inline-block sm:hidden transition ease-in-out  px-4 py-2 text-black rounded-md font-medium hover:bg-black hover:text-white duration-500"
+                      className="transition ease-in-out text-sm px-2 py-1 rounded-md font-medium  bg-[#0D1821] hover:bg-green-500 text-white  hover:text-white duration-500"
                     >
                       Logout
                     </button>
                   ) : (
                     <NavLink to={"/login"}>
-                      <button className=" inline-block sm:hidden px-4 py-2  rounded-md font-medium duration-500 bg-[#0D1821] transition ease-in-out  my-2 hover:bg-green-500 text-white  col-span-2">
+                      <button className=" transition ease-in-out text-sm px-2 py-1 rounded-md font-medium  bg-[#0D1821] hover:bg-green-500 text-white  hover:text-white duration-500">
                         Login
                       </button>
                     </NavLink>
@@ -135,11 +135,15 @@ const Navbar = () => {
                 </li>
                 <li>
                   {" "}
-                  <NavLink to={"/register"}>
-                    <button className="transition ease-in-out px-4 py-2 bg-green-500 text-white rounded-md font-medium hover:bg-green-600 duration-500">
-                      Register Now
-                    </button>
-                  </NavLink>
+                  {user ? (
+                    <p></p>
+                  ) : (
+                    <NavLink to={"/register"}>
+                      <button className="transition ease-in-out mt-4 text-sm px-2 py-1 bg-green-500 text-white rounded-md font-medium hover:bg-green-600 duration-500">
+                        Register Now
+                      </button>
+                    </NavLink>
+                  )}
                 </li>
               </ul>
             </div>
@@ -155,23 +159,27 @@ const Navbar = () => {
               {user ? (
                 <button
                   onClick={handelDelete}
-                  className="hidden sm:inline-block transition ease-in-out  px-4 py-2 rounded-md font-medium  bg-[#0D1821] hover:bg-green-500 text-white  hover:text-white duration-500"
+                  className=" transition ease-in-out  px-4 py-2 rounded-md font-medium  bg-[#0D1821] hover:bg-green-500 text-white  hover:text-white duration-500"
                 >
                   Logout
                 </button>
               ) : (
                 <NavLink to={"/login"}>
-                  <button className="hidden sm:inline-block  px-4 py-2  rounded-md font-medium duration-500 transition ease-in-out  my-2 bg-[#0D1821]  hover:bg-green-500 text-white  col-span-2">
+                  <button className="  px-4 py-2  rounded-md md:font-medium duration-500 transition ease-in-out  my-2 bg-[#0D1821]  hover:bg-green-500 text-white  col-span-2">
                     Login
                   </button>
                 </NavLink>
               )}
             </div>
-            <NavLink to={"/register"}>
-              <button className="transition ease-in-out px-4 py-2 bg-green-500 text-white rounded-md font-medium hover:bg-green-600 duration-500">
-                Register Now
-              </button>
-            </NavLink>
+            {user ? (
+              <p></p>
+            ) : (
+              <NavLink to={"/register"}>
+                <button className="transition ease-in-out px-4 py-2 bg-green-500 text-white rounded-md md:font-medium hover:bg-green-600 duration-500">
+                  Register
+                </button>
+              </NavLink>
+            )}
           </div>
         </div>
       </Container>
