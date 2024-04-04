@@ -16,7 +16,7 @@ const ButtonComponent = ({ categorys }) => {
     "bg-indigo-500",
     "bg-purple-500",
     "bg-pink-500",
-    "bg-gray-500"
+    "bg-gray-500",
   ];
 
   // Generate a random index to select a background color
@@ -26,7 +26,9 @@ const ButtonComponent = ({ categorys }) => {
   return (
     <div className="mx-auto">
       <Link to={`/analysis/${category}`}>
-        <div className={`shadow-md rounded-md p-4 w-80 ${backgroundColor}`}>
+        <div
+          className={`shadow-md rounded-md p-4 w-48 md:w-80 ${backgroundColor}`}
+        >
           <p className="text-xl font-bold text-center text-white">{category}</p>
         </div>
       </Link>

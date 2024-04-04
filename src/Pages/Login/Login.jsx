@@ -6,6 +6,7 @@ import { FaRegEye, FaRegEyeSlash } from "react-icons/fa";
 import loginBg from "../../assets/images/login.webp";
 import { Link, useNavigate } from "react-router-dom";
 import useAuth from "../../hooks/useAuth";
+import Swal from "sweetalert2";
 
 const Login = () => {
   const { signIn } = useAuth();
@@ -23,6 +24,15 @@ const Login = () => {
     signIn(data.email, data.password)
       .then(() => {
         navigate("/analysis");
+
+        // Show success message
+        Swal.fire({
+          position: "top-end",
+          icon: "success",
+          title: "Log in successful",
+          showConfirmButton: false,
+          timer: 1500,
+        });
       })
       .catch((error) => {
         console.error(error);

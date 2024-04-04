@@ -5,8 +5,8 @@ import loginBg from "../../assets/images/login.webp";
 import { Link, useNavigate } from "react-router-dom";
 import { Helmet } from "react-helmet";
 import useAxios from "../../hooks/useAxios";
-import toast, { Toaster } from "react-hot-toast";
 import useAuth from "../../hooks/useAuth";
+import Swal from "sweetalert2";
 const Register = () => {
   const { createUser } = useAuth();
   const {
@@ -31,11 +31,25 @@ const Register = () => {
         console.log(result.user);
         publicAxios.post("/users", userInfo).then((res) => {
           if (res.data.insertedID) {
-            console.log("user added to the database");
-            toast.success(" Login Success");
+            // Show success message
+            Swal.fire({
+              position: "top-end",
+              icon: "success",
+              title: "WOW! Now you are verified client",
+              showConfirmButton: false,
+              timer: 1500,
+            });
           }
         });
         navigete("/");
+        // Show success message
+        Swal.fire({
+          position: "top-end",
+          icon: "success",
+          title: "Registation successful",
+          showConfirmButton: false,
+          timer: 1500,
+        });
       })
       .catch((error) => {
         console.error(error);
@@ -56,9 +70,6 @@ const Register = () => {
             <h3 className="text-2xl text-[#333] font-bold capitalize text-center">
               REGISTRATION
             </h3>
-            <div>
-              <Toaster></Toaster>
-            </div>
 
             <form
               className="w-full flex flex-col gap-2"

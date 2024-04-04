@@ -7,7 +7,6 @@ const Analysis = () => {
   const category = useLoaderData();
   console.log(category);
   return (
-
     <div className="min-h-[80vh] bg-gray-100 ">
       <Helmet>
         <title>Forex 02 Hero | Analysis</title>
@@ -21,11 +20,23 @@ const Analysis = () => {
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           allowfullscreen
         ></iframe>
-
-        <div className="grid grid-cols-2 gap-4 py-5">
-          {
-            category.map(categorys => <ButtonComponent key={categorys.id} categorys={categorys}></ButtonComponent>)
-          }
+        <div className="text-center">
+          <h2 className="text-3xl md:text-6xl inline border-b-2 border-green-600  font-semibold">
+            Our Daily Analysis
+          </h2>
+          <p className="md:max-w-[600px] mx-auto py-5">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Excepturi
+            eligendi adipisci laudantium. Quo eveniet minima omnis quod
+            consequuntur quis magni.
+          </p>
+        </div>{" "}
+        <div className="grid  md:grid-cols-2 gap-4 py-5">
+          {category.map((categorys) => (
+            <ButtonComponent
+              key={categorys.id}
+              categorys={categorys}
+            ></ButtonComponent>
+          ))}
         </div>
       </Container>
     </div>
